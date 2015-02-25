@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require webcomponentsjs/webcomponents
+//= require platform/platform
 //= require_tree .

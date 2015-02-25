@@ -1,0 +1,35 @@
+<polymer-element name="frm-login">
+  <template>
+    <link rel="stylesheet" href="frm-login.css">
+    <paper-input-decorator id="email" label="Email Address" on-change="{{validateButton}}" >
+        <input id="email" is="core-input" >
+    </paper-input-decorator>
+    <paper-input-decorator id="password" label="Password" on-change="{{validateButton}}">
+        <input id="password" is="core-input" type="password" >
+    </paper-input-decorator>
+    <core-input type="password" value="foobarbaz"></core-input>
+    <paper-button on-tap="{{increment}}" id="submitb" raised disabled>TRY IT OUT</paper-button>
+  </template>
+  <script>
+  Polymer({
+       counter: 0, // Default value
+       increment: function() {
+         
+         console.log("cambioo");
+       },
+       validateButton: function() {
+         console.log("cambioo "+this.$.email.value);
+         if(this.$.email.value!="" && this.$.password.value!=""){
+           this.$.submitb.removeAttribute("disabled");
+         }else{
+           this.$.submitb.setAttribute("disabled","disabled");
+         }
+       }
+     });
+     function showError(){
+       $(".message-response").addClass("error");
+       $(".message-response").removeClass("success");
+       $(".message-response").html("<h2>Please enter a valid email address and try again</h2>");
+     }
+  </script>
+</polymer-element> 

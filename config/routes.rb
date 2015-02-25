@@ -4,7 +4,13 @@ Sweatnet::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'under_construction#index'
-
+   namespace :api, defaults: { format: "json" } do
+     resources :subscriptions, :only => [:create] do
+     end
+   end
+   
+  get '/alpha-login' => 'under_construction#alpha', as: :alpha_login
+   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,28 @@
+paper-button {
+    background: #FEEE58;
+    color: #4BC4F3;
+    font-weight: bold;
+    width: 50%;
+    margin-top: 40px;
+}
+paper-button[disabled] {
+    color: #4BC4F3;
+    font-weight: bold;
+    width: 50%;
+    margin-top: 40px;
+}
+paper-input-decorator /deep/ ::-webkit-input-placeholder {
+    /* platform specific rules for placeholder text */
+    color: white;
+}
+paper-input-decorator /deep/ ::-moz-placeholder {
+    color: white;
+}
+paper-input-decorator /deep/ :-ms-input-placeholder {
+    color: white;
+}
+
+paper-input-decorator /deep/ .unfocused-underline {
+    /* line color when the input is unfocused */
+    background-color: white;
+}
