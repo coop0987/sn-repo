@@ -1,4 +1,12 @@
 // Place all the styles related to the under_construction controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "ui/generic";
+header.under{
+  margin-top: 100px;
+  text-align: center;
+}
+.container-form{
+  text-align: center;
+  width: 470px;
+  margin: 0px auto;
+}
