@@ -2,7 +2,7 @@ class Api::SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
     res = @subscription.save
-    Notification.welcome_email(@subscription)
+    Notification.welcome_email(@subscription).deliver
     render_result(res)
   end
   
