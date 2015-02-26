@@ -1,4 +1,5 @@
-{
-  "directory": "vendor/assets/components",
-    "json": "component.json"
-}
+"storage": {
+        "packages": ".bower-cache",
+        "registry": ".bower-registry"
+    },
+    "tmp": ".bower-tmp"
