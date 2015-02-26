@@ -17,20 +17,20 @@
                $(".message-response").html("<h2>Invite requested!</h2>");
                $("#email").val("");
              }else{
-               showError();
+               showError("<h2>The email is duplicate</h2>");
              }
            } );
          }else{
-           showError();
+           showError("<h2>Please enter a valid email address and try again</h2>");
          }
          
          console.log("cambioo");
        }
      });
-     function showError(){
+     function showError(message){
        $(".message-response").addClass("error");
        $(".message-response").removeClass("success");
-       $(".message-response").html("<h2>Please enter a valid email address and try again</h2>");
+       $(".message-response").html(message);
      }
   </script>
 </polymer-element> 
