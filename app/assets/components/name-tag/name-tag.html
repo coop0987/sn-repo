@@ -1,14 +1,22 @@
 <polymer-element name="name-tag">
   <template>
     <link rel="stylesheet" href="name-tag.css">
-    <paper-button on-tap="{{increment}}" id="submit-button" raised> SUBMIT</paper-button>
+    <div style="width:80%; margin:10px auto">
+      <paper-input-decorator id="email" label="Email Address" on-change="{{validateButton}}" >
+          <input id="email" is="core-input" autocomplete="off" >
+      </paper-input-decorator>
+      
+    </div>
+    <div style="width:25%; margin:10px auto"><paper-button on-tap="{{increment}}" id="submit-button" raised> SUBMIT</paper-button>
+    </div>
+    
   </template>
   <script>
   Polymer({
-       counter: 0, // Default value
+      counter: 0, // Default value
        increment: function() {
          var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-         var email = $("#email").val();
+         var email = this.$.email.value;
          if(regex.test(email)){
            $.post( "/api/subscriptions", { 'subscription':  {"email": email} },function(data) {
              if(data.success){
@@ -17,20 +25,24 @@
                $(".message-response").html("<h2>Invite requested!</h2>");
                $("#email").val("");
              }else{
-               showError("<h2>The email is duplicate</h2>");
+               console.log("cambioo");
+               $(".message-response").addClass("error");
+               $(".message-response").removeClass("success");
+               $(".message-response").html("<h2>The email is duplicate</h2>");
              }
            } );
          }else{
-           showError("<h2>Please enter a valid email address and try again</h2>");
+           console.log("cambioo3");
+           $(".message-response").addClass("error");
+           $(".message-response").removeClass("success");
+           $(".message-response").html("<h2>Please enter a valid email address and try again</h2>");
          }
          
-         console.log("cambioo");
+         
        }
      });
      function showError(message){
-       $(".message-response").addClass("error");
-       $(".message-response").removeClass("success");
-       $(".message-response").html(message);
+      
      }
   </script>
 </polymer-element> 

@@ -6,10 +6,14 @@ paper-button {
     margin-top: 40px;
 }
 paper-button[disabled] {
-    color: #4BC4F3;
+    background: #E0E0E0;
+    color:  #BDBDBD;
     font-weight: bold;
     width: 50%;
     margin-top: 40px;
+}
+paper-button:hover {
+  background-color: #FEF59D;
 }
 paper-input-decorator /deep/ ::-webkit-input-placeholder {
     /* platform specific rules for placeholder text */
@@ -25,4 +29,8 @@ paper-input-decorator /deep/ :-ms-input-placeholder {
 paper-input-decorator /deep/ .unfocused-underline {
     /* line color when the input is unfocused */
     background-color: white;
+}
+paper-input-decorator /deep/ .focused-underline {
+    /* line color when the input is unfocused */
+    background-color: #FEEE58;
 }

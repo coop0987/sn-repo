@@ -2,7 +2,6 @@ class Api::SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
     res = @subscription.save
-    Notification.welcome_email(@subscription).deliver
     render_result(res)
   end
   
@@ -12,6 +11,7 @@ class Api::SubscriptionsController < ApplicationController
   
   def render_result(res)
     if res
+      Notification.welcome_email(@subscription).deliver
       render json: {
         success: true,
        subscription:  @subscription.as_json()
