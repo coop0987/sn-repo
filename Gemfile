@@ -33,6 +33,7 @@ gem "bower-rails", "~> 0.9.2"
 gem 'emcee'
 
 gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
