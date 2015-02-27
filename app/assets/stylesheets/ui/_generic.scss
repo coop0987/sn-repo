@@ -1,7 +1,12 @@
 $bright-blue: #4BC4F3;
 $light-blue: #81D4FA;
 $light-yellow: #FEF59D;
-$helvetica: 'Helvetica', 'Arial', sans-serif;
+@font-face {
+  font-family: 'helvetica_light';
+  src: url('/assets/helvetica_light.ttf');
+}
+$helvetica: 'helvetica_light', 'Arial', sans-serif;
+
 html {
     height: 100%;
 }
