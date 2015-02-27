@@ -3,7 +3,7 @@ $light-blue: #81D4FA;
 $light-yellow: #FEF59D;
 @font-face {
   font-family: 'helvetica_light';
-  src: url('/assets/helvetica_light.ttf');
+  src: font-url('/assets/helvetica_light.ttf');
 }
 $helvetica: 'helvetica_light', 'Arial', sans-serif;
 
