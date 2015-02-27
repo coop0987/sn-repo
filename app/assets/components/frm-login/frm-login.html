@@ -1,14 +1,14 @@
 <polymer-element name="frm-login">
   <template>
     <link rel="stylesheet" href="frm-login.css">
-    <paper-input-decorator id="email" label="Email Address" on-change="{{validateButton}}"  >
-        <input id="email" is="core-input" autocomplete="off" >
+    <paper-input-decorator id="paperemail" label="Email Address" on-change="{{validateButton}}" error="Must be a valid email!" >
+        <input id="email" is="core-input" autocomplete="off" pattern="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$" >
     </paper-input-decorator>
-    <paper-input-decorator id="password" label="Password" on-change="{{validateButton}}">
-        <input id="password" is="core-input" type="password" >
+    <paper-input-decorator id="paperpassword" label="Password" on-change="{{validateButton}}" error="Must be a valid password!">
+        <input id="password" is="core-input" type="password" required >
     </paper-input-decorator>
-    <core-input type="password" value="foobarbaz"></core-input>
-    <paper-button on-tap="{{increment}}" id="submitb" raised disabled>TRY IT OUT</paper-button>
+   
+    <paper-button on-tap="{{signIn}}" id="submitb" raised disabled>TRY IT OUT</paper-button>
   </template>
   <script>
   Polymer({
@@ -18,12 +18,32 @@
          console.log("cambioo");
        },
        validateButton: function() {
-         console.log("cambioo "+this.$.email.value);
-         if(this.$.email.value!="" && this.$.password.value!=""){
+         var decorator = this.$.paperemail;
+         var input = this.$.email;
+         decorator.isInvalid = !input.validity.valid;
+        
+         var decoratorpass = this.$.paperpassword;
+         var inputpass = this.$.password;
+         decoratorpass.isInvalid = !inputpass.validity.valid;
+                  
+         if(!decorator.isInvalid && !decoratorpass.isInvalid){
            this.$.submitb.removeAttribute("disabled");
          }else{
            this.$.submitb.setAttribute("disabled","disabled");
          }
+       },
+       signIn: function(){
+         var email = this.$.email.value;
+         var password = this.$.password.value;
+         $.post( "/api/users/sign_in", {"user": {"email": email, "password": password}},function(data) {
+             if(data.success ){
+               window.location= "/home";
+             }else{
+               $(".message-error").html("Invalid Email/password, try again!");
+             }
+         }).fail(function() {
+             $(".message-error").html("Invalid Email/password, try again!");
+        });
        }
      });
      function showError(){
