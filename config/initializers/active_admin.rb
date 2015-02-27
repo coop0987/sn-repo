@@ -230,4 +230,9 @@ ActiveAdmin.setup do |config|
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
+  config.namespace :admin do |admin|
+      admin.build_menu :utility_navigation do |menu|
+        admin.add_logout_button_to_menu menu
+      end
+    end
 end
