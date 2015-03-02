@@ -38,15 +38,7 @@ header.under{
   background-image: -moz-linear-gradient(
     rgba(75,196,243,1) 0%, rgba(75,196,243,0.6) 95%
   );
-  /* approximately a 33% opacity on blue */
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr=$bright-blueFF, endColorstr=$bright-blueFF
-  );
-
-  /* IE8 uses -ms-filter for whatever reason... */
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr=$bright-blueFF, endColorstr=$bright-blueFF
-  );
+  background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
   
   width:600px;
   margin: 40px auto;
