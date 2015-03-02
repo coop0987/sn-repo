@@ -52,12 +52,12 @@ body
     );
     /* approximately a 33% opacity on blue */
     filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr=$bright-blueFF, endColorstr=$bright-blueFF
+      startColorstr=$bright-blue, endColorstr=$bright-blue
     );
 
     /* IE8 uses -ms-filter for whatever reason... */
     -ms-filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr=$bright-blueFF, endColorstr=$bright-blueFF
+      startColorstr=$bright-blue, endColorstr=$bright-blue
     );
     height: 100%;
        margin: 0;
