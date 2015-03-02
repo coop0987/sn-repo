@@ -4,7 +4,7 @@
     <paper-input-decorator id="paperemail" label="Email Address" on-change="{{validateButton}}" error="Must be a valid email!" >
         <input id="email" is="core-input" autocomplete="off" pattern="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$" >
     </paper-input-decorator>
-    <paper-input-decorator id="paperpassword" label="Password" on-change="{{validateButton}}" error="Must be a valid password!">
+    <paper-input-decorator id="paperpassword" label="Password" on-change="{{validatePassword}}" error="Must be a valid password!">
         <input id="password" is="core-input" type="password" required >
     </paper-input-decorator>
    
@@ -22,11 +22,22 @@
          var input = this.$.email;
          decorator.isInvalid = !input.validity.valid;
         
+         var inputpass = this.$.password;
+                  
+         if(!decorator.isInvalid && inputpass.validity.valid){
+           this.$.submitb.removeAttribute("disabled");
+         }else{
+           this.$.submitb.setAttribute("disabled","disabled");
+         }
+       },
+       validatePassword: function() {
+        var input = this.$.email;
+        
          var decoratorpass = this.$.paperpassword;
          var inputpass = this.$.password;
          decoratorpass.isInvalid = !inputpass.validity.valid;
                   
-         if(!decorator.isInvalid && !decoratorpass.isInvalid){
+         if(input.validity.valid && !decoratorpass.isInvalid){
            this.$.submitb.removeAttribute("disabled");
          }else{
            this.$.submitb.setAttribute("disabled","disabled");
