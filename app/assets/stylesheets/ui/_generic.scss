@@ -4,11 +4,11 @@ $light-yellow: #FEF59D;
 $letter-spacing: .02em;
 @font-face {
   font-family: 'lato_hairline';
-  src: url(  '/assets/Lato-Hairline_gdi.ttf') format('truetype'),
-  url( '/assets/Lato-Hairline_gdi.svg') format('svg'),
-  url( '/assets/Lato-Hairline_gdi.otf') format("opentype"),
-  url( '/assets/Lato-Hairline_gdi.woff') format('woff'),
-  url( '/assets/Lato-Hairline_gdi.eot') format('embedded-opentype');
+  src: url(  asset-path('Lato-Hairline_gdi.ttf','font')) format('truetype'),
+  url( asset-path('Lato-Hairline_gdi.svg','font')) format('svg'),
+  url( asset-path('Lato-Hairline_gdi.otf','font')) format("opentype"),
+  url( asset-path('Lato-Hairline_gdi.woff','font')) format('woff'),
+  url( asset-path('Lato-Hairline_gdi.eot','font')) format('embedded-opentype');
 }
 $lato_hairline: lato_hairline;
 $helvetica: 'helvetica_light', 'Helvetica', sans-serif;
