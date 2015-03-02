@@ -2,14 +2,15 @@
 <html>
 <head>
   <title>Sweatnet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= html_import_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice" style="display:none;"><%= notice %></p>
-         <p class="alert" style="display:none;"><%= alert %></p>
+  <div class="notice" style="display:none;"><%= notice %></div>
+         <div class="alert" style="display:none;"><%= alert %></div>
 <%= yield %>
 </body>
 </html>

@@ -1,9 +1,12 @@
 #submit-button {
     background: #FEEE58;
     color: #4BC4F3;
-    font-weight: bold;
     width: 100%;
-    font-size: 14px;
+    font-family: raleway_bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+    line-height: 140%;
+    letter-spacing: 0.02em;
 }
 #submit-button:hover {
   background-color: #FEF59D;

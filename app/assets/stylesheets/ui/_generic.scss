@@ -10,7 +10,25 @@ $letter-spacing: .02em;
   url( asset-path('Lato-Hairline_gdi.woff','font')) format('woff'),
   url( asset-path('Lato-Hairline_gdi.eot','font')) format('embedded-opentype');
 }
+@font-face {
+  font-family: 'lato_thin';
+  src: url(  asset-path('Lato-Thin_gdi.ttf','font')) format('truetype'),
+  url( asset-path('Lato-Thin_gdi.svg','font')) format('svg'),
+  url( asset-path('Lato-Thin_gdi.otf','font')) format("opentype"),
+  url( asset-path('Lato-Thin_gdi.woff','font')) format('woff'),
+  url( asset-path('Lato-Thin_gdi.eot','font')) format('embedded-opentype');
+}
+@font-face {
+  font-family: 'raleway_bold';
+  src: url(  asset-path('Raleway-Bold_gdi.ttf','font')) format('truetype'),
+  url( asset-path('Raleway-Bold_gdi.svg','font')) format('svg'),
+  url( asset-path('Raleway-Bold_gdi.otf','font')) format("opentype"),
+  url( asset-path('Raleway-Bold_gdi.woff','font')) format('woff'),
+  url( asset-path('Raleway-Bold_gdi.eot','font')) format('embedded-opentype');
+}
 $lato_hairline: lato_hairline;
+$lato_thin: lato_thin;
+$raleway_bold: raleway_bold;
 $helvetica: 'helvetica_light', 'Helvetica', sans-serif;
 .modal-vertical-centered {
   transform: translate(0, 50%) !important;
@@ -22,8 +40,8 @@ html {
 }
 body
 {
-    font-family: $helvetica;
-    font-size: 14px;
+    font-family: $lato_thin;
+    font-size: 11pt;
     line-height: 140%;
     letter-spacing: $letter-spacing;
     color: white;
@@ -47,43 +65,39 @@ body
        background-attachment: fixed;
 }
 h1{
-  font-family: $helvetica;
-  font-size: 30px;
+  font-family: $lato_hairline;
+  font-size: 32pt;
   line-height: 140%;
   letter-spacing: $letter-spacing;
 }
 h2{
-  font-family: $helvetica;
-  font-weight: bold;
-  font-size: 25px;
+  font-family: $lato_thin;
+  font-size: 26pt;
   line-height: 140%;
   letter-spacing: $letter-spacing;
 }
 h3{
-  font-family: $helvetica;
-  font-weight: bold;
-  font-size: 20px;
+  font-family: $lato_thin;
+  font-size: 18pt;
   line-height: 140%;
   letter-spacing: $letter-spacing;
 }
 h4{
-  font-family: $helvetica;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 18px;
+  font-family: $lato_thin;
+  font-size: 16pt;
   line-height: 140%;
   letter-spacing: $letter-spacing;
 }
 h5{
-  font-family: $helvetica;
-  font-weight: 700;
-  font-size: 15px;
+  font-family: $raleway_bold;
+  font-size: 14pt;
+  text-transform: uppercase;
   line-height: 140%;
   letter-spacing: $letter-spacing;
 }
 h6{
-  font-family: $helvetica;
-  font-size: 14px;
+  font-family: $lato_thin;
+  font-size: 14pt;
   line-height: 140%;
   letter-spacing: $letter-spacing;
 }

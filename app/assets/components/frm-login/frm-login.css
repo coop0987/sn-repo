@@ -1,15 +1,23 @@
 paper-button {
     background: #FEEE58;
     color: #4BC4F3;
-    font-weight: bold;
     width: 50%;
     margin-top: 40px;
+    font-family: raleway_bold;
+        font-size: 14pt;
+        text-transform: uppercase;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+}
+@media screen and (max-width: 400px) {
+  paper-button {
+    width: 220px;
+  }
 }
 paper-button[disabled] {
     background: #E0E0E0;
     color:  #BDBDBD;
     font-weight: bold;
-    width: 50%;
     margin-top: 40px;
 }
 paper-button:hover {

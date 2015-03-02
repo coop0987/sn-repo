@@ -16,6 +16,9 @@ header.under{
   h3{
     margin-bottom: 0px;
   }
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 }
 
 .container-login{
@@ -46,7 +49,6 @@ header.under{
   );
   
   width:600px;
-  height: 600px;
   margin: 40px auto;
   padding-top: 60px;
   padding-left: 20px;
@@ -55,14 +57,19 @@ header.under{
   text-align: center;
   .form{
     margin-top: 70px;
-    h5{
-       font-size: 17px;
-    }
     .form-inside{
       width: 380px;
       margin: 0px auto;
       margin-top: 30px!important;
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
     }
+  }
+  
+  @media screen and (max-width: 620px) {
+    width: 100%;
+     height: auto;
   }
 }
 
