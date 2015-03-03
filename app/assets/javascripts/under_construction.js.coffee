@@ -2,9 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
-  $('.modal').on 'show.bs.modal', centerModal
+  $(".mymodal").remodal()
+  #$('.modal').on 'show.bs.modal', centerModal
   $(window).on 'resize', ->
-    $('.modal:visible').each centerModal
+   # $('.modal:visible').each centerModal
     return
   $('input:-webkit-autofill').each ->
     text = $(this).val()

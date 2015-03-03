@@ -2,6 +2,7 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "polymer": "git://github.com/Polymer/polymer",
+    "bootstrap-material-design": "git://github.com/FezVrasta/bootstrap-material-design",
     "polymer-core-elements": "git://github.com/Polymer/core-elements",
     "polymer-paper-elements": "git://github.com/Polymer/paper-elements",
     "platform": "latest"

@@ -3,6 +3,7 @@
 
 # asset 'bootstrap'
 asset 'polymer', github: 'Polymer/polymer' 
+asset 'bootstrap-material-design', github: 'FezVrasta/bootstrap-material-design'
 asset 'polymer-core-elements', github: 'Polymer/core-elements' 
 asset 'polymer-paper-elements', github: 'Polymer/paper-elements'
 asset 'platform'

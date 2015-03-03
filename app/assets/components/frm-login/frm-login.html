@@ -1,7 +1,7 @@
 <polymer-element name="frm-login">
   <template>
     <link rel="stylesheet" href="frm-login.css">
-    <paper-input-decorator id="paperemail" label="Email Address" on-change="{{validateButton}}" error="Must be a valid email!" >
+    <paper-input-decorator  id="paperemail" label="Email Address" on-change="{{validateButton}}" error="Must be a valid email!" >
         <input id="email" is="core-input" autocomplete="off" pattern="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$" >
     </paper-input-decorator>
     <paper-input-decorator id="paperpassword" label="Password" on-change="{{validatePassword}}" error="Must be a valid password!">
@@ -14,8 +14,6 @@
   Polymer({
        counter: 0, // Default value
        increment: function() {
-         
-         console.log("cambioo");
        },
        validateButton: function() {
          var decorator = this.$.paperemail;

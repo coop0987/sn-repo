@@ -1,13 +1,13 @@
 <polymer-element name="name-tag">
   <template>
     <link rel="stylesheet" href="name-tag.css">
-    <div style="width:80%; margin:10px auto">
+    <div class="left-side">
       <paper-input-decorator id="email" label="Email Address" on-change="{{validateButton}}" >
           <input id="email" is="core-input" autocomplete="off" >
       </paper-input-decorator>
       
     </div>
-    <div style="width:25%; margin:10px auto"><paper-button on-tap="{{increment}}" id="submit-button" raised> SUBMIT</paper-button>
+    <div class="right-side"><paper-button on-tap="{{increment}}" id="submit-button" raised> SUBMIT</paper-button>
     </div>
     
   </template>
@@ -22,20 +22,20 @@
              if(data.success){
                $(".message-response").addClass("success");
                $(".message-response").removeClass("error");
-               $(".message-response").html("<h2>Invite requested!</h2>");
+               $(".message-response").html("<h3>Invite requested!</h3>");
                $("#email").val("");
              }else{
                console.log("cambioo");
                $(".message-response").addClass("error");
                $(".message-response").removeClass("success");
-               $(".message-response").html("<h2>The email is duplicate</h2>");
+               $(".message-response").html("<h3>The email is duplicate</h3>");
              }
            } );
          }else{
            console.log("cambioo3");
            $(".message-response").addClass("error");
            $(".message-response").removeClass("success");
-           $(".message-response").html("<h2>Please enter a valid email address and try again</h2>");
+           $(".message-response").html("<h3>Please enter a valid email address and try again</h3>");
          }
          
          

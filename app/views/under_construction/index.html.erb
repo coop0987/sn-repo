@@ -23,8 +23,27 @@
   </div>
   <div class="col-md-12 container-login">
     <h3 class="lighter">
-      Alpha users <a href="#" data-toggle="modal" data-target="#modalLogin">log in here</a>
+      Alpha users <a href="#" onclick='$(".mymodal").remodal().open()'>log in here</a>
     </h3>
+  </div>
+</div>
+<div class="mymodal ">
+  <div class=" mymodal modal-body box-blue" style="">
+  <h3>
+    Without you, we'd be nowhere
+  </h3>
+  <p class="marginTop30">
+    Thank you for helping us make SweatNet's the best it can be. Please send any feedback to rachel@sweatnet.com, and don't hold back! 
+  </p>
+  <div class="form">
+    <h4 class="success">
+      Enter your alpha credentials here:
+    </h4>
+    <div class="message-error error" >
+    </div>
+    <div class="form-inside">
+      <frm-login></frm-login>
+    </div>
   </div>
 </div>
 <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog"  aria-hidden="true">
@@ -34,23 +53,7 @@
       <button type="button" class="close" data-dismiss="modal">
           <span aria-hidden="true">&times;</span>
         </button>
-        <div class="modal-body">
-        <h3>
-          Without you, we'd be nowhere
-        </h3>
-        <p class="marginTop30">
-          Thank you for helping us make SweatNet's the best it can be. Please send any feedback to rachel@sweatnet.com, and don't hold back! 
-        </p>
-        <div class="form">
-          <h4 class="success">
-            Enter your alpha credentials here:
-          </h4>
-          <div class="message-error error" >
-          </div>
-          <div class="form-inside">
-            <frm-login></frm-login>
-          </div>
-        </div>
+       
         
         
       </div>

@@ -7,6 +7,7 @@
     text-transform: uppercase;
     line-height: 140%;
     letter-spacing: 0.02em;
+    margin: 0;
 }
 #submit-button:hover {
   background-color: #FEF59D;
@@ -32,4 +33,29 @@ paper-input-decorator /deep/ .unfocused-underline {
 paper-input-decorator /deep/ .focused-underline {
     /* line color when the input is unfocused */
     background-color: #FEEE58;
+}
+.left-side{
+  width: 65%;
+  float: left;
+  margin-top: 30px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+}
+.right-side{
+  width:25%;  float:left;margin-top:30px;
+}
+@media screen and (max-width: 594px) {
+  .left-side{
+    width:98%; float:auto;margin-top: 10px;
+    padding:5px;
+    margin-left: 0px;
+  }
+  .right-side{
+    width: 115px;
+    float:none;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
 }
