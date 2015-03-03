@@ -1,0 +1,137 @@
+$bright-blue: #4BC4F3;
+$light-blue: #81D4FA;
+$light-yellow: #FEF59D;
+$letter-spacing: .02em;
+@font-face {
+  font-family: 'lato_hairline';
+  src: url(  asset-path('Lato-Hairline_gdi.ttf','font')) format('truetype'),
+  url( asset-path('Lato-Hairline_gdi.svg','font')) format('svg'),
+  url( asset-path('Lato-Hairline_gdi.otf','font')) format("opentype"),
+  url( asset-path('Lato-Hairline_gdi.woff','font')) format('woff'),
+  url( asset-path('Lato-Hairline_gdi.eot','font')) format('embedded-opentype');
+}
+@font-face {
+  font-family: 'lato_thin';
+  src: url(  asset-path('Lato-Thin_gdi.ttf','font')) format('truetype'),
+  url( asset-path('Lato-Thin_gdi.svg','font')) format('svg'),
+  url( asset-path('Lato-Thin_gdi.otf','font')) format("opentype"),
+  url( asset-path('Lato-Thin_gdi.woff','font')) format('woff'),
+  url( asset-path('Lato-Thin_gdi.eot','font')) format('embedded-opentype');
+}
+@font-face {
+  font-family: 'raleway_bold';
+  src: url(  asset-path('Raleway-Bold_gdi.ttf','font')) format('truetype'),
+  url( asset-path('Raleway-Bold_gdi.svg','font')) format('svg'),
+  url( asset-path('Raleway-Bold_gdi.otf','font')) format("opentype"),
+  url( asset-path('Raleway-Bold_gdi.woff','font')) format('woff'),
+  url( asset-path('Raleway-Bold_gdi.eot','font')) format('embedded-opentype');
+}
+$lato_hairline: lato_hairline;
+$lato_thin: lato_thin;
+$raleway_bold: raleway_bold;
+$helvetica: 'helvetica_light', 'Helvetica', sans-serif;
+.modal-vertical-centered {
+  transform: translate(0, 50%) !important;
+  -ms-transform: translate(0, 50%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+}
+html {
+    height: 100%;
+}
+body
+{
+    font-family: $lato_thin;
+    font-size: 11pt;
+    line-height: 140%;
+    letter-spacing: $letter-spacing;
+    color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(75,196,243,1)), to(rgba(75,196,243,0.6)));
+    /* mozilla example - FF3.6+ */
+    background-image: -moz-linear-gradient(
+      rgba(75,196,243,1) 0%, rgba(75,196,243,0.6) 95%
+    );
+	
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
+    height: 100%;
+       margin: 0;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+}
+h1{
+  font-family: $lato_hairline;
+  font-size: 32pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+h2{
+  font-family: $lato_thin;
+  font-size: 26pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+h3{
+  font-family: $lato_thin;
+  font-size: 18pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+h4{
+  font-family: $lato_thin;
+  font-size: 16pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+h5{
+  font-family: $raleway_bold;
+  font-size: 14pt;
+  text-transform: uppercase;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+h6{
+  font-family: $lato_thin;
+  font-size: 14pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+.display{
+  font-family: $lato_hairline;
+  font-size:  36pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+}
+.bigContainer{
+ width:100%;
+ height: 100%;
+ display: list-item;
+ padding-bottom: 40px;
+}
+
+.bigContainerGray{
+ width:100%;
+ height: 100%;
+ display: flex;
+ padding-bottom: 40px;
+}
+
+.no-padding{
+  padding-left: 10px !important;
+  padding-right: 0px!important;
+}
+.message-response{
+  margin-top: 20px;
+  text-align: center;
+}
+.success{
+  color: #FEEE58;
+}
+.error{
+  color: #EC407A;
+}
+.marginTop30{
+  margin-top: 30px;
+}
+.lighter{
+  font-weight: lighter;
+}

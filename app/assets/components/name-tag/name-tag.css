@@ -1,0 +1,61 @@
+#submit-button {
+    background: #FEEE58;
+    color: #4BC4F3;
+    width: 100%;
+    font-family: raleway_bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+#submit-button:hover {
+  background-color: #FEF59D;
+}
+#email:-webkit-autofill {
+    background-color: #2a2a2a !important;
+}
+paper-input-decorator /deep/ ::-webkit-input-placeholder {
+    /* platform specific rules for placeholder text */
+    color: white;
+}
+paper-input-decorator /deep/ ::-moz-placeholder {
+    color: white;
+}
+paper-input-decorator /deep/ :-ms-input-placeholder {
+    color: white;
+}
+
+paper-input-decorator /deep/ .unfocused-underline {
+    /* line color when the input is unfocused */
+    background-color: white;
+}
+paper-input-decorator /deep/ .focused-underline {
+    /* line color when the input is unfocused */
+    background-color: #FEEE58;
+}
+.left-side{
+  width: 65%;
+  float: left;
+  margin-top: 30px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+}
+.right-side{
+  width:25%;  float:left;margin-top:30px;
+}
+@media screen and (max-width: 594px) {
+  .left-side{
+    width:98%; float:auto;margin-top: 10px;
+    padding:5px;
+    margin-left: 0px;
+  }
+  .right-side{
+    width: 115px;
+    float:none;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+}

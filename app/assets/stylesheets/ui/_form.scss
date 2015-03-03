@@ -1,0 +1,28 @@
+input[type='text'], input[type="button"]{
+  border: 1px solid #3bc9f0;
+  -webkit-box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.75);
+  font-family: $helvetica;
+  font-weight: lighter;
+  font-size: 18pt;
+}
+input[type='text']{
+  line-height: 140%;
+  letter-spacing: 7%;
+  width: 100%;
+  color: $light-blue;
+  padding: 4px 10px;
+  height: 52px;
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+}
+input[type='button']{
+  background-color: $light-yellow;
+  color: $bright-blue;
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  padding: 6px 12px;
+}

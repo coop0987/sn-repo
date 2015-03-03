@@ -1,0 +1,44 @@
+paper-button {
+    background: #FEEE58;
+    color: #4BC4F3;
+    width: 50%;
+    margin:0;
+    margin-top: 40px;
+    font-family: raleway_bold;
+        font-size: 14pt;
+        text-transform: uppercase;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        width: 180px;
+}
+paper-button[disabled] {
+    background: #E0E0E0;
+    color:  #BDBDBD;
+    font-weight: bold;
+    margin-top: 40px;
+}
+paper-button:hover {
+  background-color: #FEF59D;
+}
+paper-input-decorator /deep/ ::-webkit-input-placeholder {
+    /* platform specific rules for placeholder text */
+    color: white;
+}
+paper-input-decorator /deep/ ::-moz-placeholder {
+    color: white;
+}
+paper-input-decorator /deep/ :-ms-input-placeholder {
+    color: white;
+}
+
+paper-input-decorator /deep/ .unfocused-underline {
+    /* line color when the input is unfocused */
+    background-color: white;
+}
+paper-input-decorator /deep/ .focused-underline {
+    /* line color when the input is unfocused */
+    background-color: #FEEE58;
+}
+.error-icon{
+  display: none;
+}
