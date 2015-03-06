@@ -16,3 +16,6 @@
 /tmp
 *.keep
 vendor/assets/components
+
+# Ignore vagrant files
+.vagrant
