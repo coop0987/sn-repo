@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sweatnet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= html_import_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body fullbleed vertical layout unresolved ng-app="sweatnetApp">
+  <core-header-panel flex>
+    <core-toolbar id="mainheader">
+      <span class="titleApp" flex>SweatNet</span>
+      <core-icon icon="menu"></core-icon>
+    </core-toolbar>
+   
+  </core-header-panel>
+  <div layout horizontal center-center fit ng-view>
+    
+  </div>
+</body>
+</html>

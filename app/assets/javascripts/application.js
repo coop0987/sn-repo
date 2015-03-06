@@ -17,4 +17,10 @@
 //= require turbolinks
 //= require webcomponentsjs/webcomponents
 //= require platform/platform
+//= require angular
+//= require angular-mocks
+//= require angular-route
+//= require angular-resource
+//= require ng-polymer-elements/ng-polymer-elements  
+//= require_tree ./templates
 //= require_tree .

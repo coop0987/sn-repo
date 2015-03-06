@@ -1,0 +1,16 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+core-header-panel {
+}
+core-toolbar {
+  background-color: white;
+  color: $bright-blue;
+  font-size: 34pt;
+  core-icon {
+    width: 30px!important;
+    height: 30px!important;
+  }
+}
+
+
