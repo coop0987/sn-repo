@@ -5,6 +5,8 @@
     "bootstrap-material-design": "git://github.com/FezVrasta/bootstrap-material-design",
     "polymer-core-elements": "git://github.com/Polymer/core-elements",
     "polymer-paper-elements": "git://github.com/Polymer/paper-elements",
-    "platform": "latest"
+    "platform": "latest",
+    "angular": "latest",
+    "bootstrap-sass-official": "latest"
   }
 }

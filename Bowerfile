@@ -2,8 +2,11 @@
 # Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
 
 # asset 'bootstrap'
-asset 'polymer', github: 'Polymer/polymer' 
+asset 'polymer', github: 'Polymer/polymer'
 asset 'bootstrap-material-design', github: 'FezVrasta/bootstrap-material-design'
-asset 'polymer-core-elements', github: 'Polymer/core-elements' 
+asset 'polymer-core-elements', github: 'Polymer/core-elements'
 asset 'polymer-paper-elements', github: 'Polymer/paper-elements'
 asset 'platform'
+# add angular
+asset 'angular'
+asset 'bootstrap-sass-official'

@@ -22,3 +22,7 @@ rbenv global 2.2.0
 rbenv rehash
 
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Install node
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+sudo apt-get install -y nodejs
