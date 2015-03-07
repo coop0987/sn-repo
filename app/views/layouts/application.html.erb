@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
   <title>Sweatnet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -10,7 +15,19 @@
 </head>
 <body>
   <div class="notice" style="display:none;"><%= notice %></div>
-         <div class="alert" style="display:none;"><%= alert %></div>
-<%= yield %>
+  <div class="alert" style="display:none;"><%= alert %></div>
+
+  <core-menu-button>
+        <core-icon-button icon="menu"></core-icon-button>
+        <core-dropdown class="dropdown">
+          <core-menu>
+            <template repeat="{{pastries}}">
+              <core-item>{{}}</core-item>
+            </template>
+          </core-menu>
+        </core-dropdown>
+ </core-menu-button>
+
+  <%= yield %>
 </body>
 </html>

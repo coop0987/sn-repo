@@ -46,7 +46,7 @@ header.under{
     rgba(75,196,243,1) 0%, rgba(75,196,243,0.6) 95%
   );
   background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #00A3EF 100%);
-  
+
   width:600px;
   margin: 40px auto;
   padding-top: 60px;
@@ -66,7 +66,7 @@ header.under{
       }
     }
   }
-  
+
   @media screen and (max-width: 620px) {
     width: 100%;
      height: auto;
@@ -100,4 +100,3 @@ header.under{
     text-decoration:none;
   }
 }
-
