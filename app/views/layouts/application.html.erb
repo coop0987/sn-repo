@@ -16,17 +16,19 @@
 <body>
   <div class="notice" style="display:none;"><%= notice %></div>
   <div class="alert" style="display:none;"><%= alert %></div>
-
-  <core-menu-button>
-        <core-icon-button icon="menu"></core-icon-button>
-        <core-dropdown class="dropdown">
-          <core-menu>
-            <template repeat="{{pastries}}">
-              <core-item>{{}}</core-item>
-            </template>
-          </core-menu>
-        </core-dropdown>
- </core-menu-button>
+  <div class="header-container">
+    <p class="header-logo">SweatNet</p>
+    <core-menu-button class="header-menu">
+          <core-icon-button class="menu-button" icon="menu"></core-icon-button>
+          <core-dropdown class="dropdown">
+            <core-menu>
+              <template repeat="{{pastries}}">
+                <core-item>{{}}</core-item>
+              </template>
+            </core-menu>
+          </core-dropdown>
+   </core-menu-button>
+ </div>
 
   <%= yield %>
 </body>
