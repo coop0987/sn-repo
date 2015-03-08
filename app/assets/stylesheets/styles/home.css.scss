@@ -5,11 +5,6 @@
   background-color: white;
   border-bottom: none;
 }
-//
-// .paper-dropdown-menu-label::shadow #control {
-//   background-color: red;
-//   color: blue;
-// }
 
 paper-dropdown-menu::shadow #label {
   color: #81D4FA;
@@ -17,4 +12,56 @@ paper-dropdown-menu::shadow #label {
 
 paper-dropdown-menu::shadow #arrow {
   color: #81D4FA;
+}
+
+.filter-buttons {
+  margin-top: 100px
+}
+
+#find-fitness-button {
+  background: #FEEE58;
+  color: #4BC4F3;
+  font-family: raleway_bold;
+  font-size: 14pt;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-top: 50px;
+}
+#find-fitness-button:hover {
+  background-color: #FEF59D;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.home-footer {
+  width: 100%;
+  margin-top: 100px;
+  background-color: white;
+  margin: 50px, 0, 0, 0;
+}
+
+.section-header-text {
+  font-family: $helvetica;
+  font-size: 18pt;
+  line-height: 140%;
+  letter-spacing: $letter-spacing;
+  color: #81D4FA;
+  margin-left: -30px;
+  margin-top: 12px;
 }

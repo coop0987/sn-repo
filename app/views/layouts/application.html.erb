@@ -16,7 +16,7 @@
 <body>
   <div class="notice" style="display:none;"><%= notice %></div>
   <div class="alert" style="display:none;"><%= alert %></div>
-  <div class="header-container">
+  <!-- <div class="header-container">
     <p class="header-logo">SweatNet</p>
     <core-menu-button class="header-menu">
           <core-icon-button class="menu-button" icon="menu"></core-icon-button>
@@ -28,7 +28,24 @@
             </core-menu>
           </core-dropdown>
    </core-menu-button>
- </div>
+ </div> -->
+
+ <core-toolbar class="header-toolbar">
+   <span flex class="header-logo">SweatNet</span>
+   <core-icon-button icon="menu" class="header-menu"></core-icon-button>
+ </core-toolbar>
+   <!-- <core-icon-button icon="arrow-back"></core-icon-button> -->
+   <!-- <div flex></div> -->
+   <!-- <core-menu-button class="header-menu">
+   <core-icon-button class="menu-button" icon="menu"></core-icon-button>
+   <core-dropdown class="dropdown">
+   <core-menu>
+   <template repeat="{{pastries}}">
+   <core-item>{{}}</core-item>
+ </template>
+</core-menu>
+</core-dropdown>
+</core-menu-button> -->
 
   <%= yield %>
 </body>

@@ -9,15 +9,67 @@
     </div>
   </header>
 
-  <div class="quick-search-filter-container">
-    <paper-dropdown-menu class="paper-dropdown-menu-label" label="Your favorite pastry">
-      <paper-dropdown class="dropdown">
-        <core-menu class="paper-menu">
-          <template repeat="{{pastries}}">
-            <paper-item>{{}}</paper-item>
-          </template>
-        </core-menu>
-      </paper-dropdown>
-    </paper-dropdown-menu>
+  <div horizontal center-justified layout class="filter-buttons">
+    <div>
+      <paper-dropdown-menu class="paper-dropdown-menu-label" label="Your favorite pastry">
+        <paper-dropdown class="dropdown">
+          <core-menu class="paper-menu">
+            <template repeat="{{pastries}}">
+              <paper-item>{{}}</paper-item>
+            </template>
+          </core-menu>
+        </paper-dropdown>
+      </paper-dropdown-menu>
+
+      <paper-dropdown-menu class="paper-dropdown-menu-label" label="Your favorite pastry">
+        <paper-dropdown class="dropdown">
+          <core-menu class="paper-menu">
+            <template repeat="{{pastries}}">
+              <paper-item>{{}}</paper-item>
+            </template>
+          </core-menu>
+        </paper-dropdown>
+      </paper-dropdown-menu>
+
+      <paper-dropdown-menu class="paper-dropdown-menu-label" label="Your favorite pastry">
+        <paper-dropdown class="dropdown">
+          <core-menu class="paper-menu">
+            <template repeat="{{pastries}}">
+              <paper-item>{{}}</paper-item>
+            </template>
+          </core-menu>
+        </paper-dropdown>
+      </paper-dropdown-menu>
+    </div>
+  </div>
+
+  <div horizontal center-justified layout class="find-fitness-container">
+    <paper-button on-tap="{{increment}}" id="find-fitness-button" raised>Find Fitness</paper-button>
+  </div>
+
+  <div class="home-footer">
+    <div horizontal center-justified layout class="section-header">
+      <div class="section-header-text">Browse Classes in</div>
+      <paper-dropdown-menu class="section-header-dropdown-menu" label="New York, NY">
+        <paper-dropdown class="dropdown">
+          <core-menu class="paper-menu">
+            <template repeat="{{pastries}}">
+              <paper-item>{{}}</paper-item>
+            </template>
+          </core-menu>
+        </paper-dropdown>
+      </paper-dropdown-menu>
+    </div>
+
+    <!-- <div horizontal center-justified layout class="category-cards">
+      <div class="red">
+
+      </div>
+      <div class="blue">
+
+      </div>
+      <div class="green">
+      </div>
+    </div> -->
   </div>
 </div>
