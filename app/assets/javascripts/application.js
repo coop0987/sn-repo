@@ -15,6 +15,35 @@
 //= require jquery_ujs
 //= require jquery.remodal.min
 //= require turbolinks
+//= require ripple.js
+//= require jquery.ripple
 //= require webcomponentsjs/webcomponents
 //= require platform/platform
+//= require home
 //= require_tree .
+
+$(document).ready(function() {
+  
+    $(".dropdown dt a").click(function() {
+        $(".dropdown dd ul").toggle();
+    });
+                
+    $(".dropdown dd ul li a").click(function() {
+        var text = $(this).html();
+        $(".dropdown dt a span").html(text);
+        $(".dropdown dd ul").hide();
+       
+    });
+      
+	  $(".date_time dt a").click(function() {
+        $(".date_time dd ul").toggle();
+    });
+                
+    $(".date_time dd ul li a").click(function() {
+        var text = $(this).html();
+        $(".date_time dt a span").html(text);
+        $(".date_time dd ul").hide();
+       
+    }); 
+		  $('.zooming_effect').hoverZoom();
+});
