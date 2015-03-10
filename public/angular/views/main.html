@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="row clearfix home-class">
+    <div class="col-md-12 column">
+      <h1>Find fitness that fits your life</h1>
+      <h3>Discover classes and private instructions that are convenient<br>with your schedule, easy on your budget, and satisfying your soul.</h3>
+      <div class="form-group small-padding" align="center" layout="column" layout-align="center center">
+        <ul class="list-inline input-home">
+          <li>
+            <select class="selectpicker" multiple="true" data-max-options="2" data-size="5" select-multi title="All Classes">
+              <option>All Classes</option>
+              <option>Barre</option>
+              <option>Bootcamp</option>
+              <option>Boxing</option>
+              <option>Cardio</option>
+              <option>Crossfit</option>
+            </select>
+          </li>
+          <li>
+            <div class="right-inner-addon shadowFilter">
+                  <i class="{{iconLoc}}" ></i>
+                  <input type="location" class="form-control-home" placeholder="{{placeLoc}}" ng-focus="locChng(true)" ng-blur="locChng(false)" />
+              </div>
+          </li>
+          <li>
+            <div class="shadowFilter btn-group bootstrap-select show-tick" style="width: 200px;" sub-menu>
+              <div class="dropdown-toggle form-control-home"  id="classSelect" data-toggle="dropdown" aria-expanded="true">
+                <span class="filter-option pull-left">this evening</span>
+                <span class="fa fa-caret-down carrotIcon"></span>
+              </div>
+              <div class="dropdown-menu open form-control-select"><hr>
+                <ul class="dropdown-menu inner selectpicker datePicker" role="menu" aria-labelledby="classSelect" aria-expanded="false">
+                  <li role="presentation" >
+                    <div class="subMenu form-control-home"  id="classSelect" data-toggle="dropdown" aria-expanded="true">
+                      <a class="filter-option pull-left trigger">Today</a>
+                      <span class="fa fa-caret-right carrotIcon"></span>
+                    </div>
+                    <ul class="dropdown-menu subMenuList">
+                      <li>Morning</li>
+                      <li>Afternoon</li>
+                      <li>Evening</li>
+                      <li>Anytime</li>
+                    </ul>
+
+                  </li>
+                  <li role="presentation" >
+                    <div class="subMenu form-control-home"  id="classSelect" data-toggle="dropdown" aria-expanded="true">
+                      <a class="filter-option pull-left trigger">Tomorrow</a>
+                      <span class="fa fa-caret-right carrotIcon"></span>
+                    </div>
+                    <ul class="dropdown-menu subMenuList">
+                      <li>Morning</li>
+                      <li>Afternoon</li>
+                      <li>Evening</li>
+                      <li>Anytime</li>
+                    </ul>
+                  </li>
+                  <li role="presentation" >
+                    <div class="subMenu form-control-home"  id="classSelect" data-toggle="dropdown" aria-expanded="true">
+                      <a class="filter-option pull-left trigger">This Week</a>
+                      <span class="fa fa-caret-right carrotIcon"></span>
+                    </div>
+                  </li>
+                  <li role="presentation" >
+                    <div class="subMenu form-control-home"  id="classSelect" data-toggle="dropdown" aria-expanded="true" date-picker data-date-format="yyyy-mm-dd" data-date="2015-03">
+                      <a class="filter-option pull-left trigger" id="changedDate">More Dates </a>
+                      <span class="fa fa-calendar carrotIcon"></span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+        <md-button class="md-raised find-fitness md-hue-2">Find Fitness</md-button>
+      </div>
+    </div>
+  </div>
+  <div flex layout="row" class="browse-class">
+    <div><h2>Browse Classes in</h2> </div>
+    <div class="classSearch">
+      <h2>
+      <md-select ng-model="cityClass">
+        <md-option value="0" ng-selected="true">New York, NY</md-option>
+        <md-option value="1">New Jersy</md-option>
+        <md-option value="2">Las Vegas</md-option> 
+        <md-option value="3">California</md-option>      
+      </md-select>
+    </h2>
+    </div>
+  </div>
+
+  <div flex class="row clearfix" >
+    <div class="col-md-4 column" ng-repeat="block in blocks">
+      <div class="thumbnail">
+          <img ng-src="{{block.image}}" alt="640x425" class="img-responsive"/>
+          <div class="imageContain" align="center">
+              <div class="post-content">
+                <h3>{{block.title}}</h3>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

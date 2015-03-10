@@ -1,0 +1,73 @@
+
+
+@media (max-width:1024px) {
+  .browse-class h2{
+      font-size: 22pt !important;
+      letter-spacing: 4px !important;
+  }
+  .browse-class md-select{
+      font-size: 22pt !important;
+      letter-spacing: 4px !important;
+  }
+  .home-class h1{
+      font-size: 30pt !important;
+      letter-spacing: 6px !important;
+  }
+  
+}
+@media (max-width:768px) {
+  .browse-class h2{
+      font-size: 18pt !important;
+      letter-spacing: 3px !important;
+  }
+  .browse-class md-select{
+      font-size: 18pt !important;
+      letter-spacing: 3px !important;
+  }
+  .col-md-4{
+      display: inline-block !important;
+      max-width: 49.5% !important;
+  }
+  
+}
+@media (max-width:640px) {
+  .browse-class h2{
+      font-size: 14pt !important;
+      letter-spacing: 2px !important;
+  }
+  .browse-class md-select{
+      font-size: 14pt !important;
+      letter-spacing: 2px !important;
+  }
+  .post-content{
+    height: 50px !important;
+  }
+  .post-content h3{
+      font-size: 14px !important;
+  }
+  .browse-class h2:first-child{
+    font-size:16pt !important;
+  }
+  
+}
+@media (max-width:510px) {
+  .browse-class input{
+      width: 220px !important;
+  }
+  
+}
+@media (max-width:477px) {
+  .browse-class h2{
+      font-size: 12pt !important;
+      letter-spacing: normal !important;
+  }
+  .browse-class md-select{
+      font-size: 12pt !important;
+      letter-spacing: normal !important;
+  }
+  .col-md-4{
+      max-width: 100% !important;
+  }
+  
+  
+}

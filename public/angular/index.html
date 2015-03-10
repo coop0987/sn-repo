@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles/datepicker.css">
+    <link rel="stylesheet" href="styles/bootstrap-select.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/responsive.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="sweatnet" layout="column" ng-controller="MainCtrl">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+     <md-toolbar layout="row" class="topHeader">
+            <h1 class="logo">SweatNet</h1>
+        <div>
+            <md-button class="menu"  ng-click="navToggle()" aria-label="Show User List">
+                <md-icon md-svg-icon="menu" class="menuIcon"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <div flex layout="row">
+        <md-sidenav class="md-whiteframe-z2" md-component-id="left">
+          <md-list>
+            <md-item>
+                <md-toolbar class="menuBar">
+                <h1 class="md-toolbar-tools">Sidenav Left</h1>
+              </md-toolbar>
+            </md-item>
+            <md-item>
+               <md-toolbar class="menuItemBar">
+                <h1 class="md-toolbar-tools">Item 1</h1>
+              </md-toolbar>
+            </md-item>
+            <md-item>
+               <md-toolbar class="menuItemBar">
+                <h1 class="md-toolbar-tools">Item 2</h1>
+              </md-toolbar>
+            </md-item>
+          </md-list>
+        </md-sidenav>
+
+      <div ng-view=""></div>
+
+    </div>
+    </div>
+
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="scripts/libs/bootstrap-select.min.js"></script>
+    <script src="scripts/libs/bootstrap-datepicker.js"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
