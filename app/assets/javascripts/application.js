@@ -15,7 +15,7 @@
 //= require jquery_ujs
 //= require jquery.remodal.min
 //= require turbolinks
-//= require webcomponentsjs/webcomponents
+//= require webcomponentsjs/webcomponents.min
 //= require platform/platform
 //= require angular
 //= require angular-mocks

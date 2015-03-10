@@ -12,5 +12,253 @@ core-toolbar {
     height: 30px!important;
   }
 }
+google-map {
+  display: block;
+height: 100%;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.containerMap{
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: 900px) {
+    position: absolute;
+  
+  }
+}
+.content{
+  display: flex;
+  width: 100%;
+  height: calc(100% - 65px);
+  margin-top: 63px;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+#filterBox{
+  width: 650px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 122px;
+  background-color: white;
+  color: $bright-blue;
+  padding:20px;
+  font-weight: bold;
+  .filter{
+    margin-top: 20px;
+    display: flex;
+     @media screen and (max-width: 900px) {
+      width: 100%;
+      display: block;
+    }
+  }
+  .filterActive{
+    background-color: $bright-blue;
+    color: white;
+    width: 180px;
+    line-height: 2;
+    border-radius: 24px;
+    text-align: center;
+    padding: 0;
+    float: left;
+    margin-right: 10px;
+    paper-icon-button{
+      margin-top: -5px;
+      float: right;
+    }
+    @media screen and (max-width: 548px) {
+      margin-top:10px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    top: 43%;
+    width:100%;
+    position: relative;
+    height: auto;
+  }
+}
+
+.containerFilter{
+  @media screen and (max-width: 900px) {
+  width: 100%;
+  margin-top: 300px;
+}
+}
+.containerClass{
+  @media screen and (max-width: 900px) {
+  width: 100%;
+  margin-top: 0px;
+}
+}
+
+#classBox{
+    width: 650px;
+    position: absolute;
+    top: 145px;
+    right: 0;
+    height: calc(100% - 145px);
+    background-color: white;
+    color: $chacoal;
+    padding:20px;
+    font-weight: bold;
+    .text{
+      margin-top:  10px;
+      float:left;
+      width: 100%;
+    }
+    .containerSort{
+      margin-top: -20px;
+      text-align:right;
+      paper-dropdown-menu{
+        border: 1px solid #ccc;
+        padding: 5px;
+        background-color: white;
+        text-align:center;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+    }
+    .listContent{
+      height: calc(100% - 45px);
+      overflow: scroll;
+      padding-right: 5px;
+      overflow-x: hidden;
+    }
+    @media screen and (max-width: 900px) {
+      position: relative;
+      margin-top: 20px;
+      width:100%;
+      top: 0px;
+      .containerSort{
+        margin-top: 0px;
+      }
+      .listContent{
+        overflow: hidden;
+      }
+    }
+}
+.card {
+    margin:auto;
+    margin-top:5px;
+    background-color: $chacoal;
+    border-radius:2px;
+    color: #e0e0e0;
+    border:1px solid #d8d8d8;
+    padding:10px;
+    text-align:left;
+    font-size:10pt;
+    position:relative;
+    display: flex;
+    padding-bottom: 0px;
+    h6{
+      margin-top: 4px;
+    }
+    paper-fab{
+      background-color: #e0e0e0;
+      color: $chacoal;
+    }
+    .right-side{
+      margin-top: 8px;
+      text-align: right;
+    }
+    .buttons{
+    }
+  }
+.editFilters{
+  top: 120px;
+  height: 179px;
+  width: 75px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  background-color: $bright-blue;
+  color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-left: -7px;
+  .header{
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    z-index: 9999;
+    transform: rotate(+90deg);
+    -webkit-transform: rotate(+90deg);
+    -moz-transform: rotate(+90deg);
+    -o-transform: rotate(+90deg);
+    -ms-transform: rotate(+90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    text-align: center;
+    width: 150px;
+    top: 67px;
+    left: -31px;
+  }
+}  
+
+.editFiltersOpen{
+  top: 120px;
+  height: 500px;
+  width: 300px;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  background-color: $bright-blue;
+  color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-left: -7px;
+  padding-left: 17px;
+  padding-right: 10px;
+  .header{
+    text-align: center;
+    .close{
+      margin-top: -49px;
+    }
+  }
+  .radios{
+    margin-top: -10px;
+  }
+  paper-radio-group{
+    font-size: 10px;
+  }
+ 
+  paper-radio-button::shadow #onRadio {
+    background-color: white;
+    color: white;
+  }
+  
+  paper-radio-button::shadow #offRadio {
+    border-color: white;
+    color: white;
+  }
+  paper-radio-button::shadow #ink[checked] {
+    color: white;
+  }
+  paper-radio-button::shadow #ink[checked] {
+    color: white;
+  }
+  
+  paper-dropdown-menu{
+    color: $bright-blue;
+    background-color: white;
+    width: 100%;
+    text-align:center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+   paper-dropdown-menu /deep/ #label , paper-dropdown-menu /deep/ #arrow {
+      color: $bright-blue;
+    }
+  
+}  
 
 

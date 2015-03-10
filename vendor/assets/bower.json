@@ -10,6 +10,7 @@
     "angular-mocks": "latest",
     "angular-route": "latest",
     "angular-resource": "latest",
-    "ng-polymer-elements": "latest"
+    "ng-polymer-elements": "latest",
+    "google-map": "git://github.com/PolymerLabs/google-map"
   }
 }

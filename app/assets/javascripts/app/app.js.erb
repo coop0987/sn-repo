@@ -19,7 +19,7 @@ sweatnetApp.config(['$routeProvider',
         controller: 'HomeCtrl'
       }).
       when('/search', {
-        templateUrl: 'template/_search.html',
+        templateUrl: '<%= asset_path("templates/search.html")%>',
         controller: 'SearchCtrl'
       }).
       otherwise({

@@ -11,13 +11,17 @@ sweatnetControllers.controller('HomeCtrl', ['$scope', 'Train',
     $scope.myText = "tumadre";
   }]);
 
-/*sweatnetControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
-  function($scope, $routeParams, Phone) {
-    $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+sweatnetControllers.controller('SearchCtrl', ['$scope', '$routeParams', 
+  function($scope, $routeParams) {
+     $scope.lessons = ["uno", "dos", "tres", "cuatro"];
+      $scope.filters = ["LOCATION", "DATE/TIME", "FITNESS TYPES", "FITNESS GOALS", "SKILL LEVEL", "PRICE", "INSTRUCTOR"];
+  /*  $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
       $scope.mainImageUrl = phone.images[0];
-    });
+    });*/
 
-    $scope.setImage = function(imageUrl) {
-      $scope.mainImageUrl = imageUrl;
+   
+    $scope.toggleFilters = function(e) {
+      $(".editFilters").toggle();
+      $(".editFiltersOpen").toggle();
     }
-  }]);*/
+  }]);
