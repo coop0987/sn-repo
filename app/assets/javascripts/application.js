@@ -10,13 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require platform/platform
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery.remodal.min
 //= require turbolinks
 //= require webcomponentsjs/webcomponents.min
-//= require platform/platform
 //= require angular
 //= require angular-mocks
 //= require angular-route

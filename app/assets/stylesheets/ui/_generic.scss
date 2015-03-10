@@ -28,7 +28,7 @@ $screen-xs: 640px;
   url( asset-path('Raleway-Bold_gdi.woff','font')) format('woff'),
   url( asset-path('Raleway-Bold_gdi.eot','font')) format('embedded-opentype');
 }
-@media (max-width: $screen-sm-min) {
+@media (max-width: 640px) {
   .pull-right-xs {
     float: right;
   }
