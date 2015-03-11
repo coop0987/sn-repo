@@ -10,11 +10,12 @@
 </head>
 <body fullbleed vertical layout unresolved ng-app="sweatnetApp">
   <core-header-panel flex>
+ <paper-shadow z="1" style="z-index: 12;position: fixed;width: 100%;" >
     <core-toolbar id="mainheader">
       <span class="titleApp" flex>SweatNet</span>
       <core-icon icon="menu"></core-icon>
     </core-toolbar>
-   
+   </paper-shadow>
   </core-header-panel>
   <div layout horizontal center-center fit ng-view>
     
