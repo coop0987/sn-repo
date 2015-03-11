@@ -45,5 +45,6 @@ $(document).ready(function() {
         $(".date_time dd ul").hide();
        
     }); 
-		  $('.zooming_effect').hoverZoom();
+	
+    $('.zooming_effect').hoverZoom();
 });

@@ -5,14 +5,15 @@ $(document).ready ->
   $(".mymodal").remodal()
   #$('.modal').on 'show.bs.modal', centerModal
   $(window).on 'resize', ->
-   # $('.modal:visible').each centerModal
+    #$('.modal:visible').each centerModal
     return
-  $('input:-webkit-autofill').each ->
-    text = $(this).val()
-    name = $(this).attr('name')
-    $(this).after(@outerHTML).remove()
-    $('input[name=' + name + ']').val text
-    return
+  # Commented for now. Need to check this one.
+  #$('input:-webkit-autofill').each ->
+    #text = $(this).val()
+    #name = $(this).attr('name')
+    #$(this).after(@outerHTML).remove()
+    #$('input[name=' + name + ']').val text
+    #return
   $('#email').focus ->
     if $(this).val() == 'Enter your email address'
       $(this).val ''
