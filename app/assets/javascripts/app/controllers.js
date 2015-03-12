@@ -24,4 +24,10 @@ sweatnetControllers.controller('SearchCtrl', ['$scope', '$routeParams',
       $(".editFilters").toggle();
       $(".editFiltersOpen").toggle();
     }
+    $scope.toggle = function(e, index) {
+      console.log(index);
+      $("#collapse"+index).toggle();
+      $(".open"+index).toggle();
+      $(".close"+index).toggle();
+    }
   }]);
