@@ -225,7 +225,7 @@
 				prevMonth.setDate(prevMonth.getDate()+1);
 
 			}
-			html.push("<tr class='okCancelDate'><td>Cancel</td><td colspan='5'></td><td>Ok</td></tr>")
+			html.push("<tr class='okCancelDate'><td onclick='cancelSet()' colspan='2'>Cancel</td><td colspan='4'></td><td onclick='changeDate()' id='okSet'>Ok</td></tr>")
 			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
 			var currentYear = this.date.getFullYear();
 			
@@ -452,7 +452,7 @@
 						'</thead>',
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>'
 	};
-	DPGlobal.template = '<div class="datepicker dropdown-menu">'+
+	DPGlobal.template = '<div class="datepicker dropdown-menu animated fadeInDown">'+
 							'<div class="datepicker-days">'+
 								'<table class=" table-condensed">'+
 									DPGlobal.headTemplate+

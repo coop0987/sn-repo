@@ -11,16 +11,16 @@
   left: 0;
   padding: 4px;
   margin-top: 1px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
   /*.dow {
     border-top: 1px solid #ddd !important;
   }*/
 
 }
 .datepicker:before {
-  content: '';
+/*  content: '';*/
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -31,7 +31,7 @@
   left: 6px;
 }
 .datepicker:after {
-  content: '';
+/*  content: '';*/
   display: inline-block;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -109,9 +109,12 @@
   float: left;
   margin: 2px;
   cursor: pointer;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 150px;
+}
+.red{
+  color:#EC407A;
 }
 .datepicker td span:hover {
   background: #eeeeee;

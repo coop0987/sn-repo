@@ -22,6 +22,7 @@ md-toolbar{
 }
 .topHeader{
 	position: fixed;
+	  z-index: 100000;
 }
 .menuBar{
 	background-color: #4BC4F3!important;
@@ -58,6 +59,9 @@ md-select-menu{
 	font-family:LatoHairline;
 	font-size: large;
 	font-weight: bold;
+}
+md-sidenav{
+	z-index: 9999999;
 }
 .check-mark{
 	color: #4BC4F3;
@@ -157,6 +161,11 @@ md-select-menu{
     position: relative;
     top: 3px;
 }
+@-moz-document url-prefix() {
+    .right-inner-addon {
+    	top: 21px;
+    }
+}
 .datePicker{
 	  list-style: none;
 }
@@ -252,6 +261,11 @@ md-select-menu{
 }
 .form-control-select hr{
 width: 90%;
+  margin: 4px;
+}
+.subMenu{
+	  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .shadowFilter{
 	box-shadow:2px 2px 6px 1pt rgba(0, 0, 0, 0.43);
@@ -342,6 +356,11 @@ width: 90%;
 	color: #ffffff;
 }
 
+/*.selectpicker > li :hover{
+	background-color: #4BC4F3;
+	color: #ffffff;
+}*/
+
 .dropdown-menu .sub-menu {
     left: 100%;
     position: absolute;
@@ -372,9 +391,9 @@ width: 90%;
 	background-color: #4BC4F3 !important;
 	color:#ffffff !important;
 }*/
-.subMenu: a:hover {
+/*.subMenu: a:hover {
 	color:#ffffff !important;
-}
+}*/
 .datepicker td.active.active, .datepicker td.active:hover.active{
 	border-radius: 150px;
 	background-color: #4BC4F3 !important;
@@ -382,4 +401,27 @@ width: 90%;
 .okCancelDate{
 	color:#4BC4F3 ;
 	  font-weight: bolder;
+}
+@-webkit-keyframes ripple-animation {
+  0% {
+    -webkit-transform: scale(.01);
+            transform: scale(.01);
+  }
+
+  100% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+  }    
+}
+
+@keyframes ripple-animation {
+  0% {
+    -webkit-transform: scale(.01);
+            transform: scale(.01);
+  }
+
+  100% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+  }     
 }
