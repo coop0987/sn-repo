@@ -6,7 +6,22 @@
  *  Made by Ilya Makarov
  *  Under MIT License
  */
-@import url(http://fonts.googleapis.com/css?family=Exo+2:700,400&subset=latin,cyrillic);
+
+/* below css blocking in heroku */
+/*@import url(http://fonts.googleapis.com/css?family=Exo+2:700,400&subset=latin,cyrillic);*/
+@font-face {
+  font-family: 'Exo2-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('exo2_regular.woff2') format('woff2'), font-url('exo2_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Exo2-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('exo2_bold.woff2') format('woff2'), font-url('exo2_bold.woff') format('woff');
+}
 
 /* ==========================================================================
    Remodal necessary styles
