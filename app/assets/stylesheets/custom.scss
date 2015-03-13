@@ -87,11 +87,13 @@ h6 {
 .banner h1 {
 	text-align: center;
 	color: #fff;
+	font-weight: 600;
 }
 .banner h3 {
 	color: #fff;
 	margin-bottom: 45px;
 	text-align: center;
+	font-weight: 600;
 }
 .quick_search select {
 	width: 172px;
@@ -128,6 +130,7 @@ h6 {
 .browser-class-section h2 {
 	text-align:center;
 	color:#81D4FA;
+	font-weight: 600;
 }
 .card_col_1 {
 	width: 30%;
@@ -237,7 +240,7 @@ h6 {
 }
 .dropdown dd ul:before, .date_time dd ul:before {
 	content: '';
-	background: #e0e0e0;
+	background: none repeat scroll 0 0 #e0e0e0;
 	width: 92%;
 	height: 1px;
 	position: absolute;
@@ -259,17 +262,17 @@ h6 {
 	z-index: 99;
 }
 .dropdown a, .dropdown a:visited, .date_time a, .date_time a:visited {
-	color:#4BC4F3;
-	font-weight: bold;
+	color:#4BC4F3 !important;
+	font-weight: bold !important;
 	font-size:14px;
-	text-decoration:none;
+	text-decoration:none !important;
 	outline:none;
 }
 .dropdown a:hover, .date_time a:hover {
 	color:#4BC4F3;
 }
 .dropdown dt a, .date_time dt a {
-	background: #fff url(../images/arrow_img.png) no-repeat scroll right center;
+	background: #fff asset-url('arrow_img.png') no-repeat scroll right center;
 	display: block;
 	padding-right: 20px;
 	width: 100%;
