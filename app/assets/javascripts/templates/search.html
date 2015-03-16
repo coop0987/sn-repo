@@ -25,17 +25,17 @@
 
    <paper-shadow z="2" class="span-shadow" id="classBox">
      <div class="row">
-       <div class="col-md-1 col-sm-1 col-xs-2">
+       <div class="col-md-1 col-sm-1 col-xs-2" style="padding-left: 2px;">
          <paper-icon-button icon="star-outline" style="float: left;"></paper-icon-button> 
        </div>
-       <div class="text col-md-11 col-sm-11 col-xs-10">
-         <div class="col-md-8 col-sm-7 col-xs-10">
+       <div class="text col-md-11 col-sm-11 col-xs-10" style="padding-left: 2px;">
+         <div class="col-md-8 col-sm-7 col-xs-10" style="padding-left: 2px;">
            Get results faster! Save this search for future use
          </div>
          <div class="col-md-4 col-sm-5 col-xs-12 containerSort">
            
          
-            <paper-shadow z="1"  >
+            <paper-shadow z="2"  >
           <paper-dropdown-menu label="Sorted by Start Time"  absolute layout inline horizontal center>
               <paper-dropdown class="dropdown">
                   <core-menu class="menu">
@@ -108,10 +108,14 @@
           <paper-shadow z="1"  >
          <div class="heading" ng-click="toggle($event, $index)">{{fil}}
            <div class="open{{$index}} icon-collapse">
+              <paper-shadow z="1"  >
               <paper-icon-button icon="arrow-drop-down" style="float: left;"></paper-icon-button> 
+            </paper-shadow>
            </div>
            <div class="close{{$index}} icon-collapse" style="display:none">
+              <paper-shadow z="1"  >
              <paper-icon-button icon="arrow-drop-up" style="float: left;"></paper-icon-button> 
+           </paper-shadow>
            </div>
          <core-collapse id="collapse{{$index}}">
            <div class="collapse-content" class="co">
