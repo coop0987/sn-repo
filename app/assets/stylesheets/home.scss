@@ -120,21 +120,25 @@ body, html {
       float:left;
       padding-left: 0px;
       margin-left: -14px;
+      padding-right: 23px;
+      padding-bottom: 8px;
     }
     .containerSort{
-      margin-top: -20px;
-      padding-left: 0px;
+      margin-top: -12px;
+      padding-left: 32px;
       padding-right: 0px;
       paper-dropdown-menu{
         padding-left: 10px;
         border: none;
         width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
       }
       .dropdown {
         position: absolute;
-        top: -10px !important;
+        top: 35px !important;
         left: 0px !important;
-        width: 191px;
+        width: 202px;
       }
     }
     .listContent{
@@ -183,7 +187,7 @@ body, html {
     padding-top: 0px;
     padding-right: 0px;
     h6{
-      margin-top: 4px;
+      margin-top: 6px;
       font-size: 12pt;
       margin-bottom: 6px;
       letter-spacing: 0.05em;
@@ -203,7 +207,7 @@ body, html {
       
     }
     .right-side{
-      margin-top: 8px;
+      margin-top: 10px;
       text-align: right;
       padding-right: 10px!important;
     }
@@ -359,5 +363,14 @@ body, html {
   top: 0px;
   right: 0px;
 }
-
-
+paper-item:hover {
+            background-color: #e0e0e0;
+          }
+          .link{
+            color: white;
+            font-weight: bolder;
+            font-size: 12px;
+            &:hover, &:visited {
+              color: white;
+            }
+          }
