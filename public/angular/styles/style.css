@@ -2,6 +2,10 @@
     font-family: LatoHairline;
     src: url(./fonts/Lato-Thin_gdi.woff);
 }
+@font-face {
+    font-family: RalewayBold;
+    src: url(./fonts/Raleway-Bold_gdi.woff);
+}
 body{
 	font-family:LatoHairline;
 	font-weight: bold;
@@ -290,7 +294,7 @@ width: 90%;
 }
 .carrotIcon{
 	float: right;
-  margin-top: 5px;
+  margin-top: 3px;
   font-size: 20px;
   color:#4BC4F3;
 }
@@ -324,6 +328,7 @@ width: 90%;
 	padding-top: 6%;
 }
 .find-fitness{
+	font-family: RalewayBold;
 	margin-top: 3%;
 	width: 200px;
 	height: 38px;
@@ -439,6 +444,7 @@ md-select.md-default-theme:not([disabled]):focus .md-select-label {
 .dropdown-menu li > a{
 	color:  #4BC4F3 !important;
 }
+
 /*.dropdown-menu {
 	background-color: #fff !important;
 }*/

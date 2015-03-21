@@ -151,9 +151,11 @@
 		
 		place: function(){
 			var offset = this.component ? this.component.offset() : this.element.offset();
+			console.log(offset)
 			this.picker.css({
-				top: offset.top + this.height,
-				left: offset.left
+				top: offset.top + this.height -35,
+				left: offset.left-48,
+				'z-index':9999
 			});
 		},
 		
@@ -225,7 +227,7 @@
 				prevMonth.setDate(prevMonth.getDate()+1);
 
 			}
-			html.push("<tr class='okCancelDate'><td onclick='cancelSet()' colspan='2'>Cancel</td><td colspan='4'></td><td onclick='changeDate()' id='okSet'>Ok</td></tr>")
+			html.push("<tr class='okCancelDate'><td onclick='cancelSet()' colspan='2' style='cursor:pointer;'>Cancel</td><td colspan='4'></td><td onclick='changeDate()' id='okSet' style='cursor:pointer;'>Ok</td></tr>")
 			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
 			var currentYear = this.date.getFullYear();
 			
