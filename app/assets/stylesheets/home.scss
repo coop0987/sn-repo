@@ -136,9 +136,8 @@ body, html {
       }
       .dropdown {
         position: absolute;
-        top: 35px !important;
-        left: 0px !important;
-        width: 202px;
+        top: 35px ;
+        left: 0px ;
       }
     }
     .listContent{
@@ -147,7 +146,49 @@ body, html {
       padding-right: 5px;
       overflow-x: hidden;
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1024px) {
+      
+      @media screen and (-webkit-min-device-pixel-ratio:0) { 
+       
+      }
+      @-moz-document url-prefix() {
+        top: 145px;
+      }
+      .containerSort{
+	position: fixed;
+	top: 365px;
+        width: 180px;
+        left: 0px;
+        margin-top: 0px;
+	background-color: white;
+	padding-left: 0px;
+	margin-left: -70px;
+        paper-dropdown-menu {
+         .dropdown {
+           position: absolute;
+           top: -245px;
+           left: 54px;
+	   transform: rotate(-90deg);
+           -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+           -o-transform: rotate(-90deg);
+           -ms-transform: rotate(-90deg);
+           filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-1);
+          }
+        }
+        transform: rotate(+90deg);
+        -webkit-transform: rotate(+90deg);
+        -moz-transform: rotate(+90deg);
+        -o-transform: rotate(+90deg);
+        -ms-transform: rotate(+90deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+        paper-dropdown::shadow #background {
+        }
+      }
+      .listContent{
+        overflow: hidden;
+      }
+      @media screen and (max-width: 900px) {
       position: relative;
       margin-top: 20px;
       width:100%;
@@ -160,14 +201,40 @@ body, html {
         top: 145px;
       }
       .containerSort{
+	position: fixed;
+	top: 60px;
+        width: 45.666667%;
+        right: 10px;
+	left: initial;
         margin-top: 0px;
+	background-color: white;
+	padding-left: 0px;
+        transform: rotate(+0deg);
+        -webkit-transform: rotate(+0deg);
+        -moz-transform: rotate(+0deg);
+        -o-transform: rotate(+0deg);
+        -ms-transform: rotate(+0deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+        paper-dropdown-menu {
+         .dropdown {
+           position: absolute;
+           top: 35px;
+           left: 0px;
+	   transform: rotate(+0deg);
+           -webkit-transform: rotate(+0deg);
+           -moz-transform: rotate(+0deg);
+           -o-transform: rotate(+0deg);
+           -ms-transform: rotate(+0deg);
+           filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+          }
+        }
         paper-dropdown::shadow #background {
-          background-color: green;
         }
       }
       .listContent{
         overflow: hidden;
       }
+    }
     }
 }
 .card {
@@ -234,49 +301,63 @@ body, html {
          padding-right: 0px;
        }
      }
-  }
-.editFilters{
-  top: 120px;
-  height: 179px;
-  width: 75px;
-  position: absolute;
-  z-index: 10;
+}
+
+.editFilters {
+  top: 180px;
+  width: 175px;
+  position: fixed;
+  z-index: 11;
   left: 0;
   background-color: $bright-blue;
   color: white;
+  cursor: pointer;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  margin-left: -7px;
+  margin-left: -70px;
+  transform: rotate(+90deg);
+  -webkit-transform: rotate(+90deg);
+  -moz-transform: rotate(+90deg);
+  -o-transform: rotate(+90deg);
+  -ms-transform: rotate(+90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  text-align: center;
   .header{
     h6{
-        font-family: $raleway_bold;
-        letter-spacing: 0.05em;
+      font-family: $raleway_bold;
+      letter-spacing: 0.05em;
     }
-    display: block;
-    cursor: pointer;
-    overflow: hidden;
-    position: absolute;
-    z-index: 9999;
-    transform: rotate(+90deg);
-    -webkit-transform: rotate(+90deg);
-    -moz-transform: rotate(+90deg);
-    -o-transform: rotate(+90deg);
-    -ms-transform: rotate(+90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-    text-align: center;
-    width: 150px;
-    top: 67px;
-    left: -31px;
   }
-}  
+  @media screen and (max-width: 900px){
+   top: 60px;
+   width: 45.66666667%;
+   position: fixed;
+   z-index: 11;
+   left: 10px;
+   background-color: #10acf5;
+   color: white;
+   cursor: pointer;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   margin-left: 0px;
+   transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   -ms-transform: rotate(0deg);
+   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+   text-align: center;
+  }
+}
 
 .editFiltersOpen{
   top: 120px;
   height: auto;
   width: 300px;
   position: fixed;
-  z-index: 10;
+  z-index: 11;
   left: 0;
   background-color: $bright-blue;
   color: white;
