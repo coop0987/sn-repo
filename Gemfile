@@ -33,10 +33,12 @@ gem "bower-rails", "~> 0.9.2"
 gem 'emcee'
 
 gem 'devise'
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', '~> 1.0.0.pre1'
 
 group :production do
 gem 'thin'
+gem 'execjs'
+gem 'therubyracer'
 end
 
 group :doc do
