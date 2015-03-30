@@ -3,17 +3,17 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 
 	return function($scope, $element, $attrs) {
 
-		$element.on('mousedown', function(event) {
+		$element.on('touchstart', function(event) {
+//      alert("mouse down");
 			event.preventDefault();
-			$document.on('mousemove', mousemove);
-			$document.on('mouseup', mouseup);
+			$document.on('touchmove', mousemove);
+			$document.on('touchend', mouseup);
 		});
 
 		function mousemove(event) {
-
-			if ($attrs.resizer == 'vertical') {
+     if ($attrs.resizer == 'vertical') {
 				// Handle vertical resizer
-				var x = event.pageX;
+				var x = event.screenX;
 
 				if ($attrs.resizerMax && x > $attrs.resizerMax) {
 					x = parseInt($attrs.resizerMax);
@@ -32,7 +32,7 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 
 			} else {
 				// Handle horizontal resizer
-				var y = window.innerHeight - event.pageY;
+				var y = window.innerHeight - event.screenY;
 
 				$element.css({
 					//bottom: y + 'px'
@@ -50,8 +50,8 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 		}
 
 		function mouseup() {
-			$document.unbind('mousemove', mousemove);
-			$document.unbind('mouseup', mouseup);
+			$document.unbind('touchmove', mousemove);
+			$document.unbind('touchend', mouseup);
 		}
 	};
 });
