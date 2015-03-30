@@ -1,12 +1,17 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+paper-shadow {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
 core-header-panel {
 }
 core-toolbar {
   background-color: white;
   color: $bright-blue;
-  font-size: 34pt;
+  font-size: 16pt;
+  z-index: 50;
   core-icon {
     width: 30px!important;
     height: 30px!important;
@@ -124,11 +129,16 @@ body, html {
     padding-left: 32px;
     padding-right: 0px;
     paper-dropdown-menu{
+      -webkit-transform: translate3d(0,0,0);
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
       padding-left: 10px;
+      border-radius: 2px;
+      margin: 0px;
       border: none;
       width: 100%;
-      padding-top: 0px;
-      padding-bottom: 0px;
+      background-color: white;
+      padding-top: 6px;
+      padding-bottom: 9px;
     }
     .dropdown {
       position: absolute;
@@ -218,9 +228,9 @@ body, html {
   background-color: $bright-blue;
   color: white;
   cursor: pointer;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   margin-left: -70px;
   transform: rotate(+90deg);
   -webkit-transform: rotate(+90deg);
@@ -246,9 +256,9 @@ body, html {
   left: 0;
   background-color: $bright-blue;
   color: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   margin-left: -7px;
   padding-left: 17px;
   padding-right: 10px;
@@ -314,7 +324,7 @@ body, html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   color: #10acf5;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-bottom: 5px;
 }
 .collapse-content{
@@ -346,6 +356,9 @@ paper-item:hover {
 /*landscape*/
 /*@media screen and (orientation:landscape) and (max-width: 1024px) {*/
 @media screen and (orientation:landscape) and (max-width: 1024px) {
+  .loc {
+    display: none;
+  }
   #sidebar-resizer{
       display:inherit;
     width: 30px;
@@ -356,7 +369,7 @@ paper-item:hover {
     left: -28px;
     background-color: white;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 2px;
     div{
       min-height: 31px;
       width: 15px;
@@ -391,6 +404,9 @@ paper-item:hover {
 }
 /*portrait*/
 @media screen and (orientation:portrait)   and (max-width: 1024px) {
+  .loc {
+    display: none;
+  }
   #sidebar-resizerTop{
     display: inherit;
     height: 80px;
@@ -430,7 +446,6 @@ paper-item:hover {
       right: 10px;
       left: initial;
       margin-top: 0px;
-      background-color: white;
       padding-left: 0px;
       transform: rotate(+0deg);
       paper-dropdown-menu {
@@ -458,9 +473,9 @@ paper-item:hover {
     background-color: #10acf5;
     color: white;
     cursor: pointer;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     margin-left: 0px;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);

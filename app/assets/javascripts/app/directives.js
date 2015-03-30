@@ -6,15 +6,14 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 		$element.on('touchstart', function(event) {
 //      alert("mouse down");
 			event.preventDefault();
-			$document.on('touchmove', mousemove);
-			$document.on('touchend', mouseup);
+			document.addEventListener('touchmove', mousemove, false);
+			document.addEventListener('touchend', mouseup, false);
 		});
 
 		function mousemove(event) {
      if ($attrs.resizer == 'vertical') {
 				// Handle vertical resizer
-				var x = event.screenX;
-
+				var x = event.targetTouches[0].clientX;
 				if ($attrs.resizerMax && x > $attrs.resizerMax) {
 					x = parseInt($attrs.resizerMax);
 				}
@@ -26,22 +25,23 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 				$($attrs.resizerLeft).css({
 					width: ($(window).width() - x) + 'px'
 				});
-			/*	$($attrs.resizerRight).css({
+				/*$($attrs.resizerRight).css({
 					left: (x + parseInt($attrs.resizerWidth)) + 'px'
 				});*/
 
-			} else {
-				// Handle horizontal resizer
-				var y = window.innerHeight - event.screenY;
+			} 
 
+	if ($attrs.resizer == 'horizontal') {
+				// Handle horizontal resizer
+				var y = window.innerHeight - event.targetTouches[0].clientY;
 				$element.css({
 					//bottom: y + 'px'
 				});
 
 				$($attrs.resizerTop).css({
 					height: ( y) + 'px',
-          top: "auto",
-          bottom: 0
+          				top: "auto",
+          				bottom: 0
 				});
 				$($attrs.resizerBottom).css({
 				//	height: y + 'px'
@@ -49,11 +49,17 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 			}
 		}
 
-		function mouseup() {
-			$document.unbind('touchmove', mousemove);
-			$document.unbind('touchend', mouseup);
+		function mouseup(event) {
+			document.removeEventListener('touchmove', mousemove);
+			document.removeEventListener('touchend', mouseup);
 		}
 	};
 });
 
+angular.module('mc.reset', []).directive('resize', function($document) {
+
+	return function($scope, $element, $attrs) {
+		
+	}
+});
 /* Directives */
