@@ -78,7 +78,7 @@
      </div>
      <div class="listContent">
        <paper-shadow z="1" class="card" ng-repeat="lesson in lessons">
-       <div class="row" style="width: 100%;">
+       <div class="row" style="width: 100%;" ng-click="tooglepopup($event)">
              <div class="col-md-7 col-sm-7 col-xs-7 ">
                <h6 >Xtend Barre</h6>
                <p><a href="#/search" class="link">Xtend Barre</a><span class="loc"> Brooklin Heights, Brooklyn</span></p>
@@ -113,7 +113,7 @@
       <h6> EDIT FILTERS</h6>
      </div>
    </paper-shadow>
-      <paper-shadow z="1" class="editFiltersOpen" style="display:none;">
+    <paper-shadow z="1" class="editFiltersOpen" style="display:none;">
      <div class="header">
       <h6> EDIT FILTERS</h6>
       <div class="close"  ng-click="toggleFilters($event)">
@@ -148,7 +148,7 @@
            </div>
          </core-collapse>
          </div>
-       </paper:shadow>
+       </paper-shadow>
          <!--
        <paper-dropdown-menu label="{{fil}}"  relative layout inline horizontal center>
            <paper-dropdown class="dropdown">
@@ -163,4 +163,51 @@
      </div>
      </div>
    </paper-shadow>
+    <paper-dialog id="dialog" class="core-transition core-transition-center classpopup" transition="core-transition-center" role="dialog" layout="" vertical="" tabindex="-1" style="display: none;">
+
+      <div class="header">
+        <h6 >Xtend Barre</h6>
+        <div class="close"  ng-click="tooglepopup($event)">
+          <core-icon icon="close"></core-icon>
+        </div>
+        <p><a href="#/search" class="link">Xtend Barre</a><span class="loc"> Brooklin Heights, Brooklyn</span></p>
+        <p>Barre, All Levels</p>
+     </div>
+     
+      <div class="details" style="position: relative">
+        <paper-shadow z="2" class="tabl tabl1">
+          <div class="header">
+            <strong><h5>some title</h5></strong>
+          </div>
+          <div class="content">
+            <div class="item" ng-repeat="item in items">{{item}}</div>
+          </div>
+        </paper-shadow>
+        <paper-shadow z="2" class="tabl tabl2">
+          <div class="header">
+            <strong><h5>some title</h5></strong>
+          </div>
+          <div class="content">
+            <div class="item" ng-repeat="item in items">{{item}}</div>
+          </div>
+        </paper-shadow>
+        <paper-shadow z="2" class="tabl tabl1">
+          <div class="header">
+            <strong><h5>some title</h5></strong>
+          </div>
+          <div class="content">
+            <div class="item" ng-repeat="item in items">{{item}}</div>
+          </div>
+        </paper-shadow>
+        <paper-shadow z="2" class="tabl tabl2">
+          <div class="header">
+            <strong><h5>some title</h5></strong>
+          </div>
+          <div class="content">
+            <div class="item" ng-repeat="item in items">{{item}}</div>
+          </div>
+        </paper-shadow>
+      </div> 
+
+    </paper-dialog>
 </div>

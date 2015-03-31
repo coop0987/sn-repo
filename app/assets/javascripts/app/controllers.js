@@ -15,6 +15,7 @@ sweatnetControllers.controller('SearchCtrl', ['$scope', '$routeParams',
   function($scope, $routeParams) {
      $scope.lessons = ["uno", "dos", "tres", "cuatro"];
       $scope.filters = ["LOCATION", "DATE/TIME", "FITNESS TYPES", "FITNESS GOALS", "SKILL LEVEL", "PRICE", "INSTRUCTOR"];
+      $scope.items = ["$1", "$2", "$4", "$8", "$16"];
   /*  $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
       $scope.mainImageUrl = phone.images[0];
     });*/
@@ -29,5 +30,10 @@ sweatnetControllers.controller('SearchCtrl', ['$scope', '$routeParams',
       $("#collapse"+index).toggle();
       $(".open"+index).toggle();
       $(".close"+index).toggle();
+    }
+
+    $scope.tooglepopup = function(e) {
+      $(".classpopup").transition = "core-transition-center";
+      $(".classpopup").toggle();
     }
   }]);
