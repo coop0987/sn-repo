@@ -25,6 +25,7 @@
    </paper-shadow>
 
    <paper-shadow z="2" class="span-shadow" id="classBox">
+ 
     <div id="sidebar-resizer" 
       		resizer="vertical" 
       		resizer-width="6" 
@@ -35,18 +36,20 @@
           <div></div>
           <core-icon icon="chevron-right"></core-icon>
       	</div>  
+      
       <div id="sidebar-resizerTop" 
         		resizer="horizontal" 
         		resizer-height="6" 
         		resizer-top="#classBox" 
         		resizer-bottom=""
-        		resizer-max="1000">
+        		resizer-max="1000"
+            class="span-shadow-no-bottom">
            <span> <core-icon icon="expand-less"></core-icon></span>
             <div></div>
            <span style="float: right;margin-top: -13px;"> <core-icon icon="expand-more"></core-icon></span>
         	</div>
-            
-     <div class="row">
+     
+     <div class="row faster" >
        <div class="col-md-1 col-sm-1 col-xs-2 hidden-sm hidden-xs" style="padding-left: 2px;">
          <paper-icon-button icon="star-outline" style="float: left;"></paper-icon-button> 
        </div>

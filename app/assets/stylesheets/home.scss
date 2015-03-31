@@ -3,6 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 paper-shadow {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+}
+.span-shadow{
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+}
+.span-shadow-no-bottom{
+  -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
 }
 
 core-header-panel {
@@ -11,15 +23,19 @@ core-toolbar {
   background-color: white;
   color: $bright-blue;
   font-size: 16pt;
-  z-index: 50;
+  z-index: 9999;
+  height: 50px;
+  margin-top: -10px;
   core-icon {
     width: 30px!important;
     height: 30px!important;
   }
+  position:relative;
 }
 google-map {
   display: block;
   height: 100%;
+  z-index: 9;
 }
 body, html {
   height: 100%;
@@ -40,8 +56,8 @@ body, html {
 .content{
   display: flex;
   width: 100%;
-  height: calc(100% - 65px);
-  margin-top: 63px;
+  height: 100%;
+    margin-top: 0px;
   padding: 0;
   top: 0;
   left: 0;
@@ -50,7 +66,7 @@ body, html {
 #filterBox{
   width: 650px;
   position: absolute;
-  top: 1px;
+  top: 26px;
   right: 0;
   height: 122px;
   background-color: white;
@@ -108,9 +124,9 @@ body, html {
 #classBox{
   width: 650px;
   position: absolute;
-  top: 145px;
+  top: 176px;
   right: 0;
-  height: calc(100% - 145px);
+    height: calc(100% - 176px);
   background-color: white;
   color: $chacoal;
   padding:20px;
@@ -125,6 +141,7 @@ body, html {
     padding-bottom: 8px;
   }
   .containerSort{
+      z-index: 1;
     margin-top: -12px;
     padding-left: 32px;
     padding-right: 0px;
@@ -252,7 +269,7 @@ body, html {
   height: auto;
   width: 300px;
   position: fixed;
-  z-index: 11;
+  z-index: 13;
   left: 0;
   background-color: $bright-blue;
   color: white;
@@ -377,12 +394,12 @@ paper-item:hover {
     }
   }
   #classBox{
-    top: 0px;
-    height: 100%;
+    top: 41px;
+    height: calc(100% - 41px);
     width: 60%;
     .containerSort{
       width: 100%;
-      margin-top: -34px;
+      margin-top: -24px;
     }
   }
   .editFilters {
@@ -404,17 +421,20 @@ paper-item:hover {
 }
 /*portrait*/
 @media screen and (orientation:portrait)   and (max-width: 1024px) {
+  .faster{
+    position: absolute;
+  }
   .loc {
     display: none;
   }
   #sidebar-resizerTop{
     display: inherit;
-    height: 80px;
+    height: 23px;
     position: absolute;
     background-color: #FFF;
     text-align: center;
     border-radius: 3px;
-    left: calc(50% - 40px);
+    left: calc(50% - 48px);
     top: -20px;
     width: 96px;
     min-height: 15px;
@@ -431,17 +451,22 @@ paper-item:hover {
     }
   }
   #classBox{
-    top: 40%;
+    top: auto;
+    bottom: 0px;
     width:100%;
     height: 60%;
     display:block;
     //height: auto;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 10px;
+    padding-right: 10px;
     @-moz-document url-prefix() {
       top: 145px;
     }
     .containerSort{
       position: fixed;
-      top: 60px;
+        top: 40px;
       width: 45.666667%;
       right: 10px;
       left: initial;
@@ -456,16 +481,31 @@ paper-item:hover {
   
         }
       }
-      paper-dropdown::shadow #background {
-      }
+     paper-dropdown-menu /deep/ #arrow{
+                display:none;
+                color:red;
+              }
+        paper-dropdown-menu /deep/ #label{      
+                margin-top: 5px;
+              }
     }
     .listContent{
       height: 100%;
       margin-top: 0px;
     }
+      .listContent::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    .listContent::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+    
   }
   .editFilters {
-    top: 60px;
+      top: 41px;
     width: 45.66666667%;
     position: fixed;
     z-index: 11;
