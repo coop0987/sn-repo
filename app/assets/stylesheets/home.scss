@@ -17,6 +17,12 @@ paper-shadow {
   box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
 }
 
+.span-shadow-bottom {
+  -webkit-box-shadow: -2px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: -2px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: -2px 0px 2px 0px rgba(0,0,0,0.2);
+}
+
 core-header-panel {
 }
 core-toolbar {
@@ -45,6 +51,7 @@ body, html {
   height: 100%;
   width: 100%;
   z-index: 9;
+  -webkit-transform: translate3d(0,0,0);
   @media screen and (max-width: 900px) {
     position: absolute;
   
@@ -141,21 +148,24 @@ body, html {
     padding-bottom: 8px;
   }
   .containerSort{
-      z-index: 1;
+    z-index: 11;
     margin-top: -12px;
-    padding-left: 32px;
+    padding-left: 0px;
     padding-right: 0px;
     paper-dropdown-menu{
-      -webkit-transform: translate3d(0,0,0);
+      z-index: 11;
       -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+      background-color: white;
       padding-left: 10px;
       border-radius: 2px;
       margin: 0px;
       border: none;
       width: 100%;
-      background-color: white;
-      padding-top: 6px;
-      padding-bottom: 9px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      #arrow {
+        display: none;
+      }
     }
     .dropdown {
       position: absolute;
@@ -164,7 +174,7 @@ body, html {
     }
   }
   .listContent{
-    height: calc(100% - 45px);
+    height: calc(100% - 10px);
     overflow: scroll;
     padding-right: 5px;
     overflow-x: hidden;
@@ -204,7 +214,10 @@ body, html {
     background-color: #e0e0e0;
     color: $chacoal;
     margin-top: 2px;
-      
+    #icon {
+      top: -10px;
+      left: -10px;
+    }
   }
   .right-side{
     margin-top: 10px;
@@ -400,6 +413,7 @@ paper-item:hover {
     .containerSort{
       width: 100%;
       margin-top: -24px;
+      margin-left: 28px;
     }
   }
   .editFilters {
@@ -421,7 +435,7 @@ paper-item:hover {
 }
 /*portrait*/
 @media screen and (orientation:portrait)   and (max-width: 1024px) {
-  .faster{
+  .faster {
     position: absolute;
   }
   .loc {
@@ -466,13 +480,16 @@ paper-item:hover {
     }
     .containerSort{
       position: fixed;
-        top: 40px;
+      z-index: 11;
+      top: 37px;
       width: 45.666667%;
       right: 10px;
       left: initial;
       margin-top: 0px;
       padding-left: 0px;
       transform: rotate(+0deg);
+      transform: translate3d(0,0,0);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
       paper-dropdown-menu {
         .dropdown {
           position: absolute;
@@ -490,7 +507,7 @@ paper-item:hover {
               }
     }
     .listContent{
-      height: 100%;
+      /*height: 100%;*/
       margin-top: 0px;
     }
       .listContent::-webkit-scrollbar {
@@ -505,7 +522,7 @@ paper-item:hover {
     
   }
   .editFilters {
-      top: 41px;
+    top: 37px;
     width: 45.66666667%;
     position: fixed;
     z-index: 11;
