@@ -55,11 +55,4 @@ angular.module('mc.resizer', []).directive('resizer', function($document) {
 		}
 	};
 });
-
-angular.module('mc.reset', []).directive('resize', function($document) {
-
-	return function($scope, $element, $attrs) {
-		
-	}
-});
 /* Directives */
