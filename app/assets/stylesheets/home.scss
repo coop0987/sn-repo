@@ -385,6 +385,7 @@ paper-item:hover {
 .classpopup {
   height: calc(100% - 41px);
   width: 50%;
+  min-width: 300px;
   position: absolute;
   z-index: 11;
   right: 0;
@@ -395,20 +396,22 @@ paper-item:hover {
   border-radius: 2px;
   margin-right: 0px;
   margin-top: 41px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
+  padding: 20px;
   text-align: center;
-  .header {
-    height: 30%;
+  .classheader {
+    height: 100px;
   }
-  .details {
+  .classdetails {
     width: 100%;
-    height: 70%;
+    display: inline-flex;
+    height: calc(100% - 100px);
     overflow: auto;
     color: #565758;
     .tabl {
+      margin-bottom: 3px;
+      padding: 0px 2px;
       overflow: hidden;
+      min-width: 240px;
       -webkit-border-radius: 2px;
       border-radius: 2px;
       -moz-border-radius: 2px;
@@ -422,6 +425,7 @@ paper-item:hover {
         padding: 10px;
         background-color: white;
         .item {
+          position: relative;
           width: 100%;
           &:hover {
             background-color: #565758;
@@ -432,16 +436,22 @@ paper-item:hover {
       }
     }
     .tabl1{
-      display: inline-block;
       width: 55%;
-      margin-right: 2px;
-      margin-bottom: 3px;
+      height: auto;
+      .content{
+        table{
+          text-align: initial;
+          width: 100%;
+          border: white;
+          td{
+            width: auto;
+          }
+        }
+      }
     }
     .tabl2{
-      display: inline-block;
       width: 40%;
-      margin-left: 2px;
-      margin-bottom: 3px;
+      height: auto;
     }
   }
 }
@@ -620,4 +630,30 @@ paper-item:hover {
       font-size: 12px;
     }
   }
+}
+
+/*Table style*/
+.rTable {
+    display: block;
+    width: 100%;
+} 
+.rHeading, .rBody, .rFoot, .rRow{
+    clear: both;
+} 
+.rHead, .rFoot{
+    background-color: #DDD;
+    font-weight: bold;
+} 
+.rCell, .rHead {
+    display: inline-block;
+    width: 48%;
+    vertical-align: middle;
+} 
+.rTable:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
 }
