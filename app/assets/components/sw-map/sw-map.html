@@ -59,12 +59,29 @@
         }]
     }
     ]'>
-       <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.777" longitude="-122.38911" icon="/assets/triangle-down.png"  on-google-map-marker-click={{markerClick}} ></google-map-marker>
+       <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.777" longitude="-122.38911" icon="/assets/small-triangle.png"  on-google-map-marker-click={{markerClick}}  on-google-map-marker-mouseover={{markerMouseOver}} on-google-map-marker-mouseout={{markerMouseOut}}></google-map-marker>
+       
+         <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.763" longitude="-122.38911" icon="/assets/small-triangle.png"  on-google-map-marker-click={{markerClick}}  on-google-map-marker-mouseover={{markerMouseOver}} on-google-map-marker-mouseout={{markerMouseOut}}></google-map-marker>
+         
+           <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.760" longitude="-122.38911" icon="/assets/small-triangle.png"  on-google-map-marker-click={{markerClick}}  on-google-map-marker-mouseover={{markerMouseOver}} on-google-map-marker-mouseout={{markerMouseOut}}></google-map-marker>
+           
+             <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.777" longitude="-122.39800" icon="/assets/small-triangle.png"  on-google-map-marker-click={{markerClick}}  on-google-map-marker-mouseover={{markerMouseOver}} on-google-map-marker-mouseout={{markerMouseOut}}></google-map-marker>
+             
+             <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.777" longitude="-122.40800" icon="/assets/small-triangle.png"  on-google-map-marker-click={{markerClick}}  on-google-map-marker-mouseover={{markerMouseOver}} on-google-map-marker-mouseout={{markerMouseOut}}></google-map-marker>
+             
        </google-map>
   </template>
   <script>
   Polymer({
       counter: 0, // Default value
+    markerMouseOver: function(e, detail, sender) {
+      console.log("pasooo");
+      $(".ping-extend").show();
+    },
+    markerMouseOut: function(e, detail, sender) {
+      console.log("pasooo");
+      $(".ping-extend").hide();
+    },
        markerClick: function(e, detail, sender) {
          console.log("aqui");
        }

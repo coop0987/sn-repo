@@ -22,7 +22,40 @@ paper-shadow {
   -moz-box-shadow: -2px 0px 2px 0px rgba(0,0,0,0.2);
   box-shadow: -2px 0px 2px 0px rgba(0,0,0,0.2);
 }
-
+.ping-extend{
+  display: none;
+  position: absolute;
+  min-height: 192px;
+  width: 179px;
+  top: calc(50% - 95px);
+  background:  url( asset-path('big-triangle.png','image')) ;
+  left: calc(22%);
+  z-index: 13;
+  text-align: center;
+  padding: 10px 20px;
+  p{
+    color: #b0b1b2;
+    font-size: 12px;
+    margin-bottom:5px;
+    padding: 0px 20px;
+      line-height: 1.2;
+    &.title{
+      color: white;
+      font-size: 15px;
+        font-weight: bolder;
+    }
+    &.titlet{
+      font-size: 13px;
+      margin-top:7px;
+      padding: 0px 30px;
+    }
+    
+  }
+  a{
+    color: white;
+    font-size: 13px;
+  }
+}
 core-header-panel {
 }
 core-toolbar {
