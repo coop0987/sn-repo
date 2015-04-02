@@ -1,0 +1,5 @@
+google-map {
+  display: block;
+  height: 100%;
+  z-index: 9;
+}

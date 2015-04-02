@@ -1,0 +1,76 @@
+<polymer-element name="sw-map">
+  <template>
+         <google-map disableDefaultUI latitude="37.779" longitude="-122.3892" zoom="13" styles='[
+    {
+    "featureType": "landscape", "elementType": "labels",
+    "stylers": [ 
+      { "visibility": "off"
+     } ]
+    },
+    {
+    "featureType": "transit", 
+    "elementType": "labels",
+    "stylers": [{
+      "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "labels", 
+      "stylers": [{
+        "visibility": "off"
+        }]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels", 
+      "stylers": [{
+        "visibility": "off"
+        }]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels.icon", 
+      "stylers": [{
+        "visibility": "off"
+        }]
+    },
+    {
+      "stylers": [
+        {"hue": "#00aaff" },
+        {"saturation": -100 },
+        {"gamma": 2.15},
+        {"lightness": 12}
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels.text.fill",
+      "stylers": [{
+        "visibility": "on"
+        },
+        {"lightness": 24}]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry",
+      "stylers": [{
+        "lightness": 57
+        }]
+    }
+    ]'>
+       <google-map-marker clickEvents="true" mouseEvents="true" latitude="37.777" longitude="-122.38911" icon="/assets/triangle-down.png"  on-google-map-marker-click={{markerClick}} ></google-map-marker>
+       </google-map>
+  </template>
+  <script>
+  Polymer({
+      counter: 0, // Default value
+       markerClick: function(e, detail, sender) {
+         console.log("aqui");
+       }
+     });
+     function showError(message){
+      
+     }
+  </script>
+</polymer-element> 
