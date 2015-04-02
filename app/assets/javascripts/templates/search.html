@@ -140,8 +140,8 @@
      </div>
      <div class="listContent">
        <paper-shadow z="1" class="card" ng-repeat="lesson in lessons">
-       <div class="row" style="width: 100%;" ng-click="tooglepopup($event, $index)">
-             <div class="col-md-7 col-sm-7 col-xs-7 ">
+       <div class="row" style="width: 100%;">
+             <div class="col-md-7 col-sm-7 col-xs-7 " ng-click="tooglepopup($event, $index)">
                <h6 >{{lesson}}</h6>
                <p><a href="#/search" class="link">Xtend Barre</a><span class="loc"> Brooklin Heights, Brooklyn</span></p>
                <p>Barre, All Levels</p>
@@ -232,7 +232,7 @@
         <div class="close"  ng-click="tooglepopup($event, $index)">
           <core-icon icon="close"></core-icon>
         </div>
-        <p><a href="#/search" class="link">Xtend Barre</a><span class="loc"> Brooklin Heights, Brooklyn</span></p>
+        <p><a href="#/search" class="link">Xtend Barre</a><span> Brooklin Heights, Brooklyn</span></p>
         <p>Barre, All Levels</p>
      </div><br>
      
@@ -242,15 +242,15 @@
           <div class="header">
             <h5>ABOUT THE CLASS</h5>
           </div>
-          <div class="content">
-            <div id="more{{$index}}" style="overflow: hidden; height: 200px">
+          <div class="content" style="padding: 10px;">
+            <div id="more{{$index}}" style="overflow: hidden; height: 200px;">
               <p><strong>Instructor:</strong> Susan</p>
-              <p><strong>Categories: some categories</strong></p>
+              <p><strong>Categories:</strong> some categories</p>
               <p><strong>Description:</strong> Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
               Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
                them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.</p>
             </div>
-            <div style="width: 100%;"><paper-button ng-click="viewmore($event, $index)"><h5 style="margin: 0px; font-size: 13pt;">READ MORE</h5></paper-button></div>
+            <div style="width: 100%;" class="hover"><paper-button id="aboutread{{$index}}" ng-click="viewmore($event, $index)"><h5 style="margin: 0px; font-size: 13pt;">READ MORE</h5></paper-button></div>
           </div>
         </paper-shadow>
 
@@ -258,7 +258,7 @@
           <div class="header">
             <strong><h5>PRICING</h5></strong>
           </div>
-          <div class="content">
+          <div class="content" style="padding: 10px;">
             <div class="rTable">
               <div class="rBody">
               <div class="rRow item" ng-repeat="item in items"><div class="rCell" style="text-align: left;">{{item.desc}}</div><div class="rCell" style="text-align: right;">{{item.price}}</div><paper-ripple fit></paper-ripple></div>
@@ -273,7 +273,26 @@
             <strong><h5>TAKE THIS CLASS</h5></strong>
           </div>
           <div class="content">
-            <div class="item" >some item</div>
+            <div class="sect">
+              <div><strong>Today 5:15 - 6:15 PM 60 mins</strong></div><br>
+              <div><paper-button class="reserve" raised>RESERVE NOW</paper-button></div>
+            </div>
+            <div class="sect">
+              <div class= "tagg l" ><paper-fab icon="add" title="plus" role="button" tabindex="0"></paper-fab></div>
+              <div class= "tagg r" ><span>Add to schedule</span></div>
+            </div>
+            <div class="sect">
+              <div class= "tagg l" ><paper-fab icon="star-outline" title="plus" role="button" tabindex="0"></paper-fab></div>
+              <div class= "tagg r" >Add to favorite</div>
+            </div>
+            <div class="sect">
+              <div class= "tagg l" ><paper-fab icon="social:share" title="plus" role="button" tabindex="0"></paper-fab></div>
+              <div class= "tagg r" >Invite friends</div>
+            </div>
+            <div class="sect">
+              <div class= "tagg l" ><paper-fab icon="settings-input-antenna" title="plus" role="button" tabindex="0"></paper-fab></div>
+              <div class= "tagg r" >Get notified of changes or cancellations</div>
+            </div>
           </div>
         </paper-shadow>
         <paper-shadow z="2" class="tabl">

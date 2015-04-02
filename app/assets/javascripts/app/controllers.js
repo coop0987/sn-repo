@@ -48,28 +48,27 @@ sweatnetControllers.controller('SearchCtrl', ['$window','$scope', '$routeParams'
     }
 
     $scope.tooglepopup = function(e, index) {
-      $(".classpopup").width($("#classBox").width());
+      /*$(".classpopup").width($("#classBox").width());
       if ($("#classBox").width() <= "300px") {
         ($(".tabl").width("100%"));
-      }
+      }*/
       $(".clp"+index).transition = "core-transition-center";
       $(".clp"+index).toggle();
     }
 
     $scope.viewmore = function(e, index){
-      /*console.log($(e.target).find("h5"));*/
-      if ($(e.target).html() == "READ MORE") {
+      if ($("#aboutread"+index).children(0).html() == "READ MORE") {
         $("#more"+index).css({
           height: "auto",
           overflow: "auto"
         });
-        $(e.target).html("READ LESS");
+        $("#aboutread"+index).children(0).html("READ LESS");
       }else{
         $("#more"+index).css({
           height: "200px",
           overflow: "hidden"
         });
-        $(e.target).html("READ MORE");
+        $("#aboutread"+index).children(0).html("READ MORE");
       }
     }
   }]);

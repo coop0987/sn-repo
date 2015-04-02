@@ -181,6 +181,7 @@ body, html {
   } 
 }
 .card {
+  cursor: pointer;
   margin:auto;
   margin-top:5px;
   background-color: $chacoal;
@@ -384,7 +385,7 @@ paper-item:hover {
 /*Class popup*/
 .classpopup {
   height: calc(100% - 41px);
-  width: 50%;
+  width: 70%;
   min-width: 300px;
   position: absolute;
   z-index: 11;
@@ -408,8 +409,7 @@ paper-item:hover {
     overflow: auto;
     color: #565758;
     .tabl {
-      margin-bottom: 3px;
-      padding: 0px 2px;
+      margin: 10px 0px;
       overflow: hidden;
       min-width: 240px;
       -webkit-border-radius: 2px;
@@ -422,7 +422,6 @@ paper-item:hover {
       }
       .content{
         display: block;
-        padding: 10px;
         background-color: white;
         .item {
           position: relative;
@@ -433,10 +432,32 @@ paper-item:hover {
             cursor: pointer;
           }
         }
+        .sect{
+          border-top: 1px solid #e0e0e0;
+          padding: 10px 20px;
+          paper-fab {
+            background-color: #e0e0e0;
+            color: #565758;
+          }
+          .tagg {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .l {
+            width: 60px;
+          }
+          .r {
+            width: calc(100% - 70px);
+            text-align: left;
+            padding: 0px 10px;
+            font-weight: bold;
+          }
+        }
       }
     }
     .tabl1{
-      width: 55%;
+      padding: 0px 5px;
+      width: 60%;
       height: auto;
       .content{
         table{
@@ -450,6 +471,7 @@ paper-item:hover {
       }
     }
     .tabl2{
+      padding: 0px 5px;
       width: 40%;
       height: auto;
     }
@@ -656,4 +678,20 @@ paper-item:hover {
     content: " ";
     clear: both;
     height: 0;
+}
+.hover :hover{
+  background-color: rgba(86, 87, 88, 0.2);
+  h5 {
+   background-color: inherit; 
+  }
+}
+
+.reserve {
+  font-weight: bolder;
+  color: white;
+  background-color: #10ACF5;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding: 20px 0px;
 }
