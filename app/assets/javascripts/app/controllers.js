@@ -25,8 +25,16 @@ sweatnetControllers.controller('SearchCtrl', ['$window','$scope', '$routeParams'
         {desc: "1 month unlimited*", price: "$149"}, 
         {desc: "Buy one get one", price: "$34"}
       ];
+      $scope.dates = [
+        {date: "Mon Feb 10", time: "4:00pm", instr: "Susan"},
+        {date: "Tue Feb 11", time: "4:00pm", instr: "Susan"},
+        {date: "Fri Feb 14", time: "4:00pm", instr: "Mark"},
+        {date: "Sun Feb 16", time: "2:00pm", instr: "Victor"},
+        {date: "Mon Feb 10", time: "4:00pm", instr: "Susan"},
+        {date: "Tue Feb 11", time: "4:00pm", instr: "Susan"},
+        {date: "Fri Feb 14", time: "4:00pm", instr: "Mark"},
+      ]
       angular.element($window).bind('orientationchange', function () {
-        //alert("change");
         if($("#classBox").length>0){
           $("#classBox").removeAttr( "style" );
         }
@@ -65,7 +73,7 @@ sweatnetControllers.controller('SearchCtrl', ['$window','$scope', '$routeParams'
         $("#aboutread"+index).children(0).html("READ LESS");
       }else{
         $("#more"+index).css({
-          height: "200px",
+          height: "250px",
           overflow: "hidden"
         });
         $("#aboutread"+index).children(0).html("READ MORE");

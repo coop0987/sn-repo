@@ -467,22 +467,25 @@ paper-item:hover {
         }
         .sect{
           border-top: 1px solid #e0e0e0;
-          padding: 10px 20px;
+          padding: 5px 20px;
           paper-fab {
             background-color: #e0e0e0;
             color: #565758;
+            height: 42px;
+            width: 42px;
+            padding: 10px;
           }
           .tagg {
             display: inline-block;
             vertical-align: middle;
           }
           .l {
-            width: 60px;
+            width: 45px;
           }
           .r {
-            width: calc(100% - 70px);
+            width: calc(100% - 50px);
             text-align: left;
-            padding: 0px 10px;
+            padding: 0px 5px;
             font-weight: bold;
           }
         }
@@ -696,14 +699,21 @@ paper-item:hover {
     clear: both;
 } 
 .rHead, .rFoot{
-    background-color: #DDD;
     font-weight: bold;
+    padding: 5px 0px;
 } 
 .rCell, .rHead {
     display: inline-block;
     width: 48%;
     vertical-align: middle;
+}
+
+.rCell2, .rHead2 {
+    display: inline-block;
+    width: 31%;
+    vertical-align: middle;
 } 
+
 .rTable:after {
     visibility: hidden;
     display: block;
@@ -724,7 +734,7 @@ paper-item:hover {
   color: white;
   background-color: #10ACF5;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  padding: 20px 0px;
+  height: 90px;
+  width: 90px;
+  padding: 15px 0px;
 }

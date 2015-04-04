@@ -174,7 +174,7 @@
      </div>
      </div>
    </paper-shadow>
-    <paper-dialog ng-repeat="lesson in lessons" class="core-transition core-transition-center classpopup clp{{$index}}" transition="core-transition-center" role="dialog" layout="" vertical="" tabindex="-1" style="display: none;">
+    <paper-dialog ng-repeat="lesson in lessons" class="classpopup clp{{$index}}" transition="core-transition-center" role="dialog" layout="" vertical="" tabindex="-1" style="display: none;">
 
       <div class="classheader">
         <h6 >{{lesson}}</h6>
@@ -192,10 +192,13 @@
             <h5>ABOUT THE CLASS</h5>
           </div>
           <div class="content" style="padding: 10px;">
-            <div id="more{{$index}}" style="overflow: hidden; height: 200px;">
+            <div id="more{{$index}}" style="overflow: hidden; height: 250px;">
               <p><strong>Instructor:</strong> Susan</p>
               <p><strong>Categories:</strong> some categories</p>
               <p><strong>Description:</strong> Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
+              Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
+               them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.
+              Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
               Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
                them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.</p>
             </div>
@@ -223,8 +226,8 @@
           </div>
           <div class="content">
             <div class="sect">
-              <div><strong>Today 5:15 - 6:15 PM 60 mins</strong></div><br>
-              <div><paper-button class="reserve" raised>RESERVE NOW</paper-button></div>
+              <div style="padding: 5px 0px;"><strong>Today 5:15 - 6:15 PM 60 mins</strong></div>
+              <div style="padding: 5px 0px;"><paper-button class="reserve" raised>RESERVE NOW</paper-button></div>
             </div>
             <div class="sect">
               <div class= "tagg l" ><paper-fab icon="add" title="plus" role="button" tabindex="0"></paper-fab></div>
@@ -246,10 +249,17 @@
         </paper-shadow>
         <paper-shadow z="2" class="tabl">
           <div class="header">
-            <strong><h5>OTHER DATES</h5></strong>
+            <strong><h5>OTHER DATES/TIMES</h5></strong>
           </div>
-          <div class="content">
-            <div class="item" >some item</div>
+          <div class="content" style="padding: 10px;">
+            <div class="rTable">
+              <div class="rHeading">
+                <div class="rHead">DATE/TIME</div><div class="rHead">INSTRUCTOR</div> 
+              </div>
+              <div class="rBody" style="height: 120px; overflow: auto;">
+                <div class="rRow item" ng-repeat="date in dates"><div class="rCell">{{date.date}}, {{date.time}}</div><div class="rCell">{{date.instr}}</div><paper-ripple fit></paper-ripple></div>
+              </div>
+            </div>
           </div>
         </paper-shadow>
       </div> 
