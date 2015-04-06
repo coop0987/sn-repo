@@ -88,10 +88,12 @@
      
      </div>
      <div class="listContent">
+
+      <section>
        <paper-shadow z="1" class="card" ng-repeat="lesson in lessons">
        <div class="row" style="width: 100%;">
              <div class="col-md-7 col-sm-7 col-xs-7 " ng-click="tooglepopup($event, $index)">
-               <h6 >{{lesson}}</h6>
+               <h6>{{lesson}}</h6>
                <p><a href="#/search" class="link">Xtend Barre</a><span class="loc"> Brooklin Heights, Brooklyn</span></p>
                <p>Barre, All Levels</p>
              </div>
@@ -116,10 +118,104 @@
                </div>
              </div>
          </paper-shadow>
+      </section>
+
+      <section id="description">
+        <paper-dialog class="classpopup" role="dialog" layout="" vertical="" tabindex="-1" style="display: none;">
+          <div class="classheader">
+            <h6 style="margin: 5px 0px;">{{selectedlesson}}</h6>
+            <div class="close"  ng-click="tooglepopup($event, $index)">
+              <core-icon icon="close"></core-icon>
+            </div>
+            <p style="margin: 5px 0px;"><a href="#/search" class="link" style="font-size: 10pt;">Xtend Barre</a><span> Brooklin Heights, Brooklyn</span></p>
+            <p style="margin: 5px 0px;">Barre, All Levels</p>
+         </div>
+         
+          <div class="classdetails" style="position: relative">
+            <div class="tabl1">
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <h5>ABOUT THE CLASS</h5>
+              </div>
+              <div class="content" style="padding: 10px;">
+                <div id="more" style="overflow: hidden; height: 245px;">
+                  <p><strong>Instructor:</strong> Susan</p>
+                  <p><strong>Categories:</strong> some categories</p>
+                  <p><strong>Description:</strong> Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
+                  Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
+                   them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.
+                  Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
+                  Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
+                   them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.</p>
+                </div>
+                <div style="width: 100%;" class="hover"><paper-button id="aboutread" ng-click="viewmore($event)"><h5 style="margin: 0px; font-size: 13pt;">READ MORE</h5></paper-button></div>
+              </div>
+            </paper-shadow>
+
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <strong><h5>PRICING</h5></strong>
+              </div>
+              <div class="content" style="padding: 10px;">
+                <div class="rTable">
+                  <div class="rBody">
+                  <div class="rRow item" ng-repeat="item in items"><div class="rCell" style="text-align: left;">{{item.desc}}</div><div class="rCell" style="text-align: right;">{{item.price}}</div><paper-ripple fit></paper-ripple></div>
+                  </div>
+                </div>
+              </div>
+            </paper-shadow>
+          </div>
+          <div class="tabl2">
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <strong><h5>TAKE THIS CLASS</h5></strong>
+              </div>
+              <div class="content">
+                <div class="sect">
+                  <div style="padding: 5px 0px;"><strong>Today 5:15 - 6:15 PM 60 mins</strong></div>
+                  <div style="padding: 5px 0px;"><paper-button class="reserve" raised>RESERVE NOW</paper-button></div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="add" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" ><span>Add to schedule</span></div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="star-outline" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" >Add to favorite</div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="social:share" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" >Invite friends</div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="settings-input-antenna" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" >Get notified of changes or cancellations</div>
+                </div>
+              </div>
+            </paper-shadow>
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <strong><h5>OTHER DATES/TIMES</h5></strong>
+              </div>
+              <div class="content" style="padding: 0px 10px 10px 10px;">
+                <div class="rTable">
+                  <div class="rHeading">
+                    <div class="rHead">DATE/TIME</div><div class="rHead">INSTRUCTOR</div> 
+                  </div>
+                  <div class="rBody" style="height: 120px; overflow: auto;">
+                    <div class="rRow item" ng-repeat="date in dates"><div class="rCell">{{date.date}}, {{date.time}}</div><div class="rCell">{{date.instr}}</div><paper-ripple fit></paper-ripple></div>
+                  </div>
+                </div>
+              </div>
+            </paper-shadow>
+          </div> 
+
+        </paper-dialog>
+      </section>
      </div>
    </paper-shadow>
  </div>
-      <paper-shadow z="1" class="col-md-5 col-sm-5 col-xs-5 editFilters" ng-click="toggleFilters($event)"  >
+  <paper-shadow z="1" class="col-md-5 col-sm-5 col-xs-5 editFilters" ng-click="toggleFilters($event)"  >
      <div class="header">
       <h6> EDIT FILTERS</h6>
      </div>
@@ -174,95 +270,54 @@
      </div>
      </div>
    </paper-shadow>
-    <paper-dialog ng-repeat="lesson in lessons" class="classpopup clp{{$index}}" transition="core-transition-center" role="dialog" layout="" vertical="" tabindex="-1" style="display: none;">
-
-      <div class="classheader">
-        <h6 >{{lesson}}</h6>
-        <div class="close"  ng-click="tooglepopup($event, $index)">
-          <core-icon icon="close"></core-icon>
-        </div>
-        <p><a href="#/search" class="link">Xtend Barre</a><span> Brooklin Heights, Brooklyn</span></p>
-        <p>Barre, All Levels</p>
-     </div><br>
-     
-      <div class="classdetails" style="position: relative">
-        <div class="tabl1">
-        <paper-shadow z="2" class="tabl">
-          <div class="header">
-            <h5>ABOUT THE CLASS</h5>
-          </div>
-          <div class="content" style="padding: 10px;">
-            <div id="more{{$index}}" style="overflow: hidden; height: 250px;">
-              <p><strong>Instructor:</strong> Susan</p>
-              <p><strong>Categories:</strong> some categories</p>
-              <p><strong>Description:</strong> Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
-              Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
-               them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.
-              Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
-              Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
-               them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.</p>
-            </div>
-            <div style="width: 100%;" class="hover"><paper-button id="aboutread{{$index}}" ng-click="viewmore($event, $index)"><h5 style="margin: 0px; font-size: 13pt;">READ MORE</h5></paper-button></div>
-          </div>
-        </paper-shadow>
-
-        <paper-shadow z="2" class="tabl">
-          <div class="header">
-            <strong><h5>PRICING</h5></strong>
-          </div>
-          <div class="content" style="padding: 10px;">
-            <div class="rTable">
-              <div class="rBody">
-              <div class="rRow item" ng-repeat="item in items"><div class="rCell" style="text-align: left;">{{item.desc}}</div><div class="rCell" style="text-align: right;">{{item.price}}</div><paper-ripple fit></paper-ripple></div>
-              </div>
-            </div>
-          </div>
-        </paper-shadow>
-      </div>
-      <div class="tabl2">
-        <paper-shadow z="2" class="tabl">
-          <div class="header">
-            <strong><h5>TAKE THIS CLASS</h5></strong>
-          </div>
-          <div class="content">
-            <div class="sect">
-              <div style="padding: 5px 0px;"><strong>Today 5:15 - 6:15 PM 60 mins</strong></div>
-              <div style="padding: 5px 0px;"><paper-button class="reserve" raised>RESERVE NOW</paper-button></div>
-            </div>
-            <div class="sect">
-              <div class= "tagg l" ><paper-fab icon="add" title="plus" role="button" tabindex="0"></paper-fab></div>
-              <div class= "tagg r" ><span>Add to schedule</span></div>
-            </div>
-            <div class="sect">
-              <div class= "tagg l" ><paper-fab icon="star-outline" title="plus" role="button" tabindex="0"></paper-fab></div>
-              <div class= "tagg r" >Add to favorite</div>
-            </div>
-            <div class="sect">
-              <div class= "tagg l" ><paper-fab icon="social:share" title="plus" role="button" tabindex="0"></paper-fab></div>
-              <div class= "tagg r" >Invite friends</div>
-            </div>
-            <div class="sect">
-              <div class= "tagg l" ><paper-fab icon="settings-input-antenna" title="plus" role="button" tabindex="0"></paper-fab></div>
-              <div class= "tagg r" >Get notified of changes or cancellations</div>
-            </div>
-          </div>
-        </paper-shadow>
-        <paper-shadow z="2" class="tabl">
-          <div class="header">
-            <strong><h5>OTHER DATES/TIMES</h5></strong>
-          </div>
-          <div class="content" style="padding: 10px;">
-            <div class="rTable">
-              <div class="rHeading">
-                <div class="rHead">DATE/TIME</div><div class="rHead">INSTRUCTOR</div> 
-              </div>
-              <div class="rBody" style="height: 120px; overflow: auto;">
-                <div class="rRow item" ng-repeat="date in dates"><div class="rCell">{{date.date}}, {{date.time}}</div><div class="rCell">{{date.instr}}</div><paper-ripple fit></paper-ripple></div>
-              </div>
-            </div>
-          </div>
-        </paper-shadow>
-      </div> 
-
-    </paper-dialog>
 </div>
+<!--<div style="position: fixed; top: 300px; right: 800px; z-index: 66;">
+  <polymer-element name="prueba-css">
+  <template>
+  <style>
+    #hero1 {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+    }
+    #hero2 {
+      position: relative;
+      top: 200px;
+      left: 300px;
+      width: 300px;
+      height: 300px;
+    }
+    #hero1 {
+      background-color: blue;
+    }
+    #hero2 {
+      background-color: green;
+    }
+  </style>
+  <core-animated-pages id="lamina" transitions="hero-transition" selected="{{selectedPageIndex}}">
+    <section id="page1">
+      <div id="hero1" hero-id="hero" hero ng-click="changetr($event)" on-tap="{{nextPage}}"></div>
+    </section>
+    <section id="page2">
+      <div id="hero2" hero-id="hero" hero ng-click="changetr($event)" on-tap="{{previousPage}}"></div>
+    </section>
+  </core-animated-pages>
+</template>
+  <script>
+    Polymer("prueba-css", {
+      selectedPageIndex: 0,
+     
+      previousPage: function() {
+        this.$.lamina.selectPrevious(true);
+      },
+      
+      nextPage: function() {
+        this.$.lamina.selectNext(true);
+      }
+    });
+  </script>
+  </polymer-element>
+  <prueba-css></prueba-css>
+</div>-->
