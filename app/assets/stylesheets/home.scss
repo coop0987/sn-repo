@@ -407,8 +407,8 @@ paper-item:hover {
   background-color: #e0e0e0;
 }
 .link{
+  font-family: lato_medium;
   color: white;
-  font-weight: bolder;
   font-size: 12px;
   &:hover, &:visited {
     color: white;
@@ -418,44 +418,55 @@ paper-item:hover {
 /*Class popup*/
 .classpopup {
   height: calc(100% - 41px);
-  width: 70%;
+  width: 65%;
   min-width: 300px;
-  position: absolute;
+  position: fixed;
   z-index: 11;
-  right: 0;
+  right: 0px;
+  top: 0px;
   background-color: $chacoal;
   color: white;
+  font-weight: initial;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   margin-right: 0px;
   margin-top: 41px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   .classheader {
-    height: 100px;
+    height: 86px;
   }
   .classdetails {
     width: 100%;
     display: inline-flex;
     height: calc(100% - 100px);
     overflow: auto;
+    overflow-x: hidden;
     color: #565758;
     .tabl {
       margin: 10px 0px;
-      overflow: hidden;
       min-width: 240px;
-      -webkit-border-radius: 2px;
-      border-radius: 2px;
-      -moz-border-radius: 2px;
       .header{
         overflow: auto;
         font-family: lato_bold;
         background-color: #e0e0e0;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        -moz-border-top-left-radius: 2px;
+        -moz-border-top-right-radius: 2px;
+        -webkit-border-top-left-radius: 2px;
+        -webkit-border-top-right-radius: 2px;
       }
       .content{
         display: block;
         background-color: white;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        -moz-bottom-top-left-radius: 2px;
+        -moz-bottom-top-right-radius: 2px;
+        -webkit-bottom-top-left-radius: 2px;
+        -webkit-bottom-top-right-radius: 2px;
         .item {
           position: relative;
           width: 100%;
@@ -512,6 +523,15 @@ paper-item:hover {
       height: auto;
     }
   }
+  .classdetails::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  .classdetails::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(224,224,224,.7);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
 }
 
 #sidebar-resizer,  #sidebar-resizerTop{
@@ -548,6 +568,15 @@ paper-item:hover {
       width: 100%;
       margin-top: -24px;
       margin-left: 28px;
+    }
+    .listContent::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    .listContent::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
     }
   }
   .editFilters {
@@ -697,7 +726,16 @@ paper-item:hover {
 } 
 .rHeading, .rBody, .rFoot, .rRow{
     clear: both;
-} 
+}
+.rBody::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+.rBody::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
 .rHead, .rFoot{
     font-weight: bold;
     padding: 5px 0px;

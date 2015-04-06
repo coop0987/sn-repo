@@ -13,7 +13,7 @@ sweatnetControllers.controller('HomeCtrl', ['$scope', 'Train',
 
 sweatnetControllers.controller('SearchCtrl', ['$window','$scope', '$routeParams', 
   function($window, $scope, $routeParams) {
-     $scope.lessons = ["Cardio", "Crossfit", "Barre", "Boxing"];
+      $scope.lessons = ["Cardio", "Crossfit", "Barre", "Boxing"];
       $scope.filters = ["LOCATION", "DATE/TIME", "FITNESS TYPES", "FITNESS GOALS", "SKILL LEVEL", "PRICE", "INSTRUCTOR"];
       $scope.items = [
         {desc: "Drop in", price: "$34"}, 
@@ -60,23 +60,23 @@ sweatnetControllers.controller('SearchCtrl', ['$window','$scope', '$routeParams'
       if ($("#classBox").width() <= "300px") {
         ($(".tabl").width("100%"));
       }*/
-      $(".clp"+index).transition = "core-transition-center";
-      $(".clp"+index).toggle();
+      $(".classpopup").toggle();
+      $scope.selectedlesson = $scope.lessons[index];
     }
 
     $scope.viewmore = function(e, index){
-      if ($("#aboutread"+index).children(0).html() == "READ MORE") {
-        $("#more"+index).css({
+      if ($("#aboutread").children(0).html() == "READ MORE") {
+        $("#more").css({
           height: "auto",
           overflow: "auto"
         });
-        $("#aboutread"+index).children(0).html("READ LESS");
+        $("#aboutread").children(0).html("READ LESS");
       }else{
-        $("#more"+index).css({
-          height: "250px",
+        $("#more").css({
+          height: "245px",
           overflow: "hidden"
         });
-        $("#aboutread"+index).children(0).html("READ MORE");
+        $("#aboutread").children(0).html("READ MORE");
       }
     }
   }]);

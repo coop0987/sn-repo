@@ -21,6 +21,16 @@ $screen-xs: 640px;
   url( asset-path('Lato-Thin_gdi.eot','font')) format('embedded-opentype');
 }
 @font-face {
+  font-family: 'lato_medium';
+  src: url(  asset-path('Lato-Medium.ttf','font')) format('truetype');
+}
+
+@font-face {
+  font-family: 'lato_regular';
+  src: url(  asset-path('Lato-Regular.ttf','font')) format('truetype');
+}
+
+@font-face {
   font-family: 'raleway_bold';
   src: url(  asset-path('Raleway-Bold_gdi.ttf','font')) format('truetype'),
   url( asset-path('Raleway-Bold_gdi.svg','font')) format('svg'),
@@ -38,6 +48,8 @@ $screen-xs: 640px;
 }
 $lato_hairline: lato_hairline;
 $lato_thin: lato_thin;
+$lato_medium: lato_medium;
+$lato_regular: lato_regular;
 $raleway_bold: raleway_bold;
 $helvetica: 'helvetica_light', 'Helvetica', sans-serif;
 .modal-vertical-centered {
