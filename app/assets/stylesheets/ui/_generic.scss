@@ -1,7 +1,9 @@
-$bright-blue: #4BC4F3;
+$bright-blue: #10ACF5;
 $light-blue: #81D4FA;
 $light-yellow: #FEF59D;
 $letter-spacing: .02em;
+$chacoal: #565758;
+$screen-xs: 640px;
 @font-face {
   font-family: 'lato_hairline';
   src: url(  asset-path('Lato-Hairline_gdi.ttf','font')) format('truetype'),
@@ -19,6 +21,16 @@ $letter-spacing: .02em;
   url( asset-path('Lato-Thin_gdi.eot','font')) format('embedded-opentype');
 }
 @font-face {
+  font-family: 'lato_medium';
+  src: url(  asset-path('Lato-Medium.ttf','font')) format('truetype');
+}
+
+@font-face {
+  font-family: 'lato_regular';
+  src: url(  asset-path('Lato-Regular.ttf','font')) format('truetype');
+}
+
+@font-face {
   font-family: 'raleway_bold';
   src: url(  asset-path('Raleway-Bold_gdi.ttf','font')) format('truetype'),
   url( asset-path('Raleway-Bold_gdi.svg','font')) format('svg'),
@@ -26,8 +38,18 @@ $letter-spacing: .02em;
   url( asset-path('Raleway-Bold_gdi.woff','font')) format('woff'),
   url( asset-path('Raleway-Bold_gdi.eot','font')) format('embedded-opentype');
 }
+@media (max-width: 640px) {
+  .pull-right-xs {
+    float: right;
+  }
+  .pull-left-xs {
+    float: left;
+  }
+}
 $lato_hairline: lato_hairline;
 $lato_thin: lato_thin;
+$lato_medium: lato_medium;
+$lato_regular: lato_regular;
 $raleway_bold: raleway_bold;
 $helvetica: 'helvetica_light', 'Helvetica', sans-serif;
 .modal-vertical-centered {
@@ -37,6 +59,26 @@ $helvetica: 'helvetica_light', 'Helvetica', sans-serif;
 }
 html {
     height: 100%;
+}
+core-icon-button {
+  -moz-user-select: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 2px;
+  padding: 7px;
+  vertical-align: middle;
+}
+html core-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentcolor;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+  width: 24px;
 }
 body
 {
@@ -87,7 +129,7 @@ h5{
   font-size: 14pt;
   text-transform: uppercase;
   line-height: 140%;
-  letter-spacing: $letter-spacing;
+  letter-spacing: 0.05em;
 }
 h6{
   font-family: $lato_thin;

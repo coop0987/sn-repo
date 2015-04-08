@@ -9,3 +9,4 @@ function centerModal() {
     // Center modal vertically in window
 
 }
+window.addEventListener('polymer-ready', function() { angular.bootstrap(wrap(document), ['sweatnetApp']); });

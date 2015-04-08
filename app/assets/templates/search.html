@@ -1,0 +1,113 @@
+ <div class="content">
+   <div class="containerMap">
+     <google-map disableDefaultUI latitude="37.779" longitude="-122.3892" zoom="13"></google-map>
+   </div>
+   <div class="containerFilter">
+   <paper-shadow z="2" class="span-shadow" id="filterBox">
+     <div class="">
+       We found 11 ways to get sweathy that match your criteria. remove filters for more results:
+     </div>
+     <div class="filter row">
+       <div class="filterActive col-sm-4 col-xs-6">
+         barre classes
+         <paper-icon-button icon="close"></paper-icon-button>
+       </div>
+       <div class="filterActive  col-sm-4 col-xs-6">
+         11201
+         <paper-icon-button icon="close"></paper-icon-button>
+       </div>
+       <div class="filterActive  col-sm-4 col-xs-6">
+         this evening
+         <paper-icon-button icon="close"></paper-icon-button>
+       </div>
+     </div>
+   </paper-shadow>
+
+   <paper-shadow z="2" class="span-shadow" id="classBox">
+     <div class="" style="display: flex;">
+       <paper-icon-button icon="star" style="float: left;"></paper-icon-button> 
+       <div class="text">
+         <div class="col-md-8 col-sm-7 col-xs-12">
+           Get results faster! Save this search for future use
+         </div>
+         <div class="col-md-4 col-sm-5 col-xs-12 containerSort">
+           <paper-dropdown-menu label="Sorted by Start Time"  relative layout inline horizontal center>
+               <paper-dropdown class="dropdown">
+                   <core-menu class="menu">
+                       <paper-item>Croissant</paper-item>
+                       <paper-item>Donut</paper-item>
+                       <paper-item>Financier</paper-item>
+                       <paper-item>Madeleine</paper-item>
+                   </core-menu>
+               </paper-dropdown>
+           </paper-dropdown-menu>
+         </div>
+       </div>
+     
+     </div>
+     <div class="listContent">
+       <paper-shadow z="1" class="card" ng-repeat="lesson in lessons">
+       <div class="row" style="width: 100%;">
+             <div class="col-md-7 col-sm-7 col-xs-7 ">
+               <h6 >Xtend Barre</h6>
+               <p><strong>Xtend Barre</strong> Brooklin Heights, Brooklyn</p>
+               <p>Barre, All Levels</p>
+             </div>
+          
+               <div class="col-md-4 col-sm-4 col-xs-5 right-side">
+                 <p >
+                   Today
+                 </p>
+                 <p>
+                   5:15 - 6:15 PM
+                 </p>
+                 <p>
+                   60 mins
+                 </p>
+               </div> 
+               <div class="col-md-1 col-sm-1 col-xs-12 buttons">
+                <div class="pull-left-xs"> <paper-fab mini="" icon="add" class="green" title="plus" role="button" tabindex="0"></paper-fab>
+                </div>
+                <div class="pull-right-xs">
+                  <paper-fab mini="" icon="star" class="green" title="plus" role="button" tabindex="0"></paper-fab>
+                </div>
+               </div>
+             </div>
+         </paper-shadow>
+     </div>
+   </paper-shadow>
+ </div>
+      <paper-shadow z="1" class="editFilters" ng-click="toggleFilters($event)"  >
+     <div class="header">
+      <h6> EDIT FILTERS</h6>
+     </div>
+   </paper-shadow>
+      <paper-shadow z="1" class="editFiltersOpen" style="display:none;">
+     <div class="header">
+      <h6> EDIT FILTERS</h6>
+      <div class="close"  ng-click="toggleFilters($event)">
+        <core-icon icon="close"></core-icon>
+      </div>
+     </div>
+     <div class="radios">
+       <paper-radio-group selected="small">
+         <paper-radio-button name="small" label="Group Classes"></paper-radio-button>
+         <paper-radio-button name="medium" label="Classes at my gym"></paper-radio-button>
+       </paper-radio-group>
+     </div>
+     <div  style="positio: relative">
+       <div style="display: absolute" ng-repeat="fil in filters">
+       <paper-dropdown-menu label="{{fil}}"  relative layout inline horizontal center>
+           <paper-dropdown class="dropdown">
+               <core-menu class="menu">
+                   <paper-item>Croissant</paper-item>
+                   <paper-item>Donut</paper-item>
+                   <paper-item>Financier</paper-item>
+                   <paper-item>Madeleine</paper-item>
+               </core-menu>
+           </paper-dropdown>
+       </paper-dropdown-menu>
+     </div>
+     </div>
+   </paper-shadow>
+</div>
