@@ -17,14 +17,15 @@
           </li>
           <li>
             <div class="right-inner-addon shadowFilter">
-                  <i class="{{iconLoc}}" ></i>
-                  <input type="location" class="form-control-home" placeholder="{{placeLoc}}" ng-focus="locChng(true)" ng-blur="locChng(false)" />
-              </div>
+                  <button class="fa fa-times" ng-click="clearLoc('close')" ng-show="!isLocTyp"></button>
+                  <button class="fa fa-location-arrow lightPink" ng-click="clearLoc('loc')" ng-show="isLocTyp"></button>
+                  <input type="text" class="form-control-home" placeholder="{{placeLoc}}" ng-model="locationFilter" ng-focus="isLocTyp=true;placeLoc='enter address or zip'" ng-blur="isLocTyp=false" />
+              </div><!-- /input-group -->
           </li>
           <li>
             <div class="shadowFilter btn-group bootstrap-select show-tick" style="width: 200px;" sub-menu>
               <div class="dropdown-toggle form-control-home"  id="classSelect1" data-toggle="dropdown" aria-expanded="true" style="padding-top: 7px;">
-                <span class="filter-option pull-left">this evening</span>
+                <span class="filter-option pull-left" ng-bind-html="timeData"></span>
                 <span class="fa fa-caret-down carrotIcon" id="dropTimeDate"></span>
               </div>
               <div class="dropdown-menu open form-control-select animated fadeInDown"><hr>
@@ -35,10 +36,10 @@
                       <span class="fa fa-caret-right carrotIcon"></span>
                     </div>
                     <ul class="dropdown-menu subMenuList animated fadeInDown slideDown">
-                      <li>Morning</li>
-                      <li>Afternoon</li>
-                      <li>Evening</li>
-                      <li>Anytime</li>
+                      <li ng-click="changeDate('today','morning',false)">Morning</li>
+                      <li ng-click="changeDate('today','afternoon',false)">Afternoon</li>
+                      <li ng-click="changeDate('today','evening',false)">Evening</li>
+                      <li ng-click="changeDate('today','anytime',false)">Anytime</li>
                     </ul>
 
                   </li>
@@ -48,10 +49,10 @@
                       <span class="fa fa-caret-right carrotIcon"></span>
                     </div>
                     <ul class="dropdown-menu subMenuList animated fadeInDown slideDown">
-                      <li>Morning</li>
-                      <li>Afternoon</li>
-                      <li>Evening</li>
-                      <li>Anytime</li>
+                      <li ng-click="changeDate('tommorow','morning',false)">Morning</li>
+                      <li ng-click="changeDate('tommorow','afternoon',false)">Afternoon</li>
+                      <li ng-click="changeDate('tommorow','evening',false)">Evening</li>
+                      <li ng-click="changeDate('tommorow','anytime',false)">Anytime</li>
                     </ul>
                   </li>
                   <li role="presentation" >
@@ -60,10 +61,10 @@
                       <span class="fa fa-caret-right carrotIcon"></span>
                     </div>
                     <ul class="dropdown-menu subMenuList animated fadeInDown slideDown">
-                      <li>Morning</li>
-                      <li>Afternoon</li>
-                      <li>Evening</li>
-                      <li>Anytime</li>
+                      <li ng-click="changeDate('this week','morning',false)">Morning</li>
+                      <li ng-click="changeDate('this week','afternoon',false)">Afternoon</li>
+                      <li ng-click="changeDate('this week','evening',false)">Evening</li>
+                      <li ng-click="changeDate('this week','anytime',false)">Anytime</li>
                     </ul>
                   </li>
                   <li role="presentation" >
@@ -72,10 +73,10 @@
                       <span class="fa fa-caret-right carrotIcon"></span>
                     </div>
                     <ul class="dropdown-menu subMenuList animated fadeInDown" id="dateSelect">
-                      <li>Morning</li>
-                      <li>Afternoon</li>
-                      <li>Evening</li>
-                      <li>Anytime</li>
+                      <li ng-click="changeDate(false,'morning',true)">Morning</li>
+                      <li ng-click="changeDate(false,'afternoon',true)">Afternoon</li>
+                      <li ng-click="changeDate(false,'evening',true)">Evening</li>
+                      <li ng-click="changeDate(false,'anytime',true)">Anytime</li>
                     </ul>
                   </li>
                 </ul>
@@ -103,7 +104,7 @@
   </div>
 
   <div flex class="row clearfix" >
-    <div class="col-md-4 column" ng-repeat="block in blocks">
+    <div class="md-raised col-md-4 column" ng-repeat="block in blocks">
         <div class="thumbnail ripple-effect" data-ripple-color="rgba(255, 255, 255, 0.3)" zoom-mouse>
           <img ng-src="{{block.image}}" alt="640x640" class="img-responsive" />
           <div class="imageContain" align="center">

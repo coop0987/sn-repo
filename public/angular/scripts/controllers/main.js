@@ -12,6 +12,15 @@ angular.module('sweatnet')
     $scope.iconLoc = "fa fa-times";
     $scope.placeLoc = "in New York, NY";
     $scope.classesList=['All Classes','Barre','Bootcamp','Boxing','Cardio','Crossfit','test input'];
+    $scope.timeData = "this evening";
+    $scope.changeDate = function(type,data,time){
+      if(time){
+        $scope.timeData =  $("#okSet").attr('date') +" "+data;
+      }
+      else{
+        $scope.timeData = type+" "+data;
+      }
+    }
     $scope.navToggle=function(){
       $mdSidenav('left').toggle()
     }
@@ -23,16 +32,13 @@ angular.module('sweatnet')
    		{'title':"Bootcamp","image":"img/a/bootcamp.jpg"},
    		{'title':"Crew","image":"img/a/crew.jpg"}
     ];
-    $scope.locChng = function(param){
-      if(param)
-      {
-        $scope.placeLoc = "enter address or zip";
-        $scope.iconLoc = "fa fa-location-arrow lightPink";
-      }
-      else
-      {
-        $scope.iconLoc = "fa fa-times";
-      }
+    $scope.isLocTyp = false;
+    $scope.clearLoc = function(iconLoc){
+      console.log(iconLoc)
+        if($scope.placeLoc=="enter address or zip")
+          $scope.locationFilter = "";
+        else
+          $scope.locationFilter = "in New York, NYC";
     }
   }).directive('selectMulti', function() {
     return {
