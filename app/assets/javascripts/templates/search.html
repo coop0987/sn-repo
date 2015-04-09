@@ -1,0 +1,323 @@
+ <div class="content" resize="#classBox">
+   <div class="containerMap">
+       <sw-map></sw-map>
+   </div>
+   
+   <div class="ping-extend">
+     <p class="title">
+       Xtend Barre
+     </p>
+     <p>
+       147 Remsen St 2nd Floor
+     </p>
+     <p  class="title titlet">
+       <a>GET DIRECTIONS</a>
+     </p>
+   </div>
+   <div class="containerFilter">
+   <paper-shadow z="2" class="span-shadow" id="filterBox">
+     <div class="">
+       We found 11 ways to get sweathy that match your criteria. remove filters for more results:
+     </div>
+     <div class="filter row">
+       <div class="filterActive col-sm-4 col-xs-6">
+         barre classes
+         <paper-icon-button icon="close"></paper-icon-button>
+       </div>
+       <div class="filterActive  col-sm-4 col-xs-6">
+         11201
+         <paper-icon-button icon="close"></paper-icon-button>
+       </div>
+       <div class="filterActive  col-sm-4 col-xs-6">
+         this evening
+         <paper-icon-button icon="close"></paper-icon-button>
+       </div>
+     </div>
+   </paper-shadow>
+
+   <paper-shadow z="2" class="span-shadow" id="classBox">
+ 
+    <div id="sidebar-resizer" 
+      		resizer="vertical" 
+      		resizer-width="6" 
+      		resizer-left="#classBox" 
+      		resizer-right=""
+      		resizer-max="1000"
+	   class="span-shadow-bottom">
+          <core-icon icon="chevron-left"></core-icon>
+          <div></div>
+          <core-icon icon="chevron-right"></core-icon>
+      	</div>  
+      
+      <div id="sidebar-resizerTop" 
+        		resizer="horizontal" 
+        		resizer-height="6" 
+        		resizer-top="#classBox" 
+        		resizer-bottom=""
+        		resizer-max="1000"
+            class="span-shadow-no-bottom">
+           <span> <core-icon icon="expand-less"></core-icon></span>
+            <div></div>
+           <span style="float: right;margin-top: -13px;"> <core-icon icon="expand-more"></core-icon></span>
+        	</div>
+     
+     <div class="row faster" >
+       <div class="col-md-1 col-sm-1 col-xs-2 hidden-sm hidden-xs loc" style="padding-left: 2px;">
+         <paper-icon-button icon="star-outline" style="float: left;"></paper-icon-button> 
+       </div>
+       <div class="text col-md-11 col-sm-11 col-xs-10" style="padding-left: 2px;">
+         <div class="col-md-7 col-sm-7 col-xs-10 hidden-sm hidden-xs loc" style="padding-left: 2px;padding-right: 0px;">
+           Get results faster! Save this search for future use
+         </div>
+         <div class="col-md-5 col-sm-5 col-xs-5 containerSort">
+           
+            
+          <paper-dropdown-menu label=""  absolute layout inline horizontal center>
+              <paper-dropdown class="dropdown" >
+                  <core-menu class="menu" selected="0">
+                      <paper-item id="0">SORTED BY START TIME</paper-item>
+                      <paper-item>Croissant</paper-item>
+                      <paper-item>Donut</paper-item>
+                      <paper-item>Financier</paper-item>
+                      <paper-item>Madeleine</paper-item>
+                  </core-menu>
+              </paper-dropdown>
+          </paper-dropdown-menu>
+         </div>
+       </div>
+     
+     </div>
+     <div class="listContent">
+
+      <section>
+       <paper-shadow z="1" class="card" ng-repeat="lesson in lessons">
+       <div class="row" style="width: 100%;">
+             <div class="col-md-7 col-sm-7 col-xs-7 " ng-click="tooglepopup($event, $index)">
+               <h6>{{lesson}}</h6>
+               <p><a href="#/search" class="link">Xtend Barre</a><span class="loc"> Brooklin Heights, Brooklyn</span></p>
+               <p>Barre, All Levels</p>
+             </div>
+          
+               <div class="col-md-4 col-sm-4 col-xs-5 right-side">
+                 <p >
+                   Today
+                 </p>
+                 <p>
+                   5:15 - 6:15 PM
+                 </p>
+                 <p>
+                   60 mins
+                 </p>
+               </div> 
+               <div class="col-md-1 col-sm-1 col-xs-12 buttons hidden-xs">
+                <div class="pull-left-xs"> <paper-fab icon="add" class="green" title="plus" role="button" tabindex="0"></paper-fab>
+                </div>
+                <div class="pull-right-xs">
+                  <paper-fab  icon="star" class="green" title="plus" role="button" tabindex="0"></paper-fab>
+                </div>
+               </div>
+             </div>
+         </paper-shadow>
+      </section>
+
+      <section id="description">
+        <paper-dialog class="classpopup" role="dialog" layout="" vertical="" tabindex="-1" style="display: none;">
+          <div class="classheader">
+            <h6 style="margin: 5px 0px;">{{selectedlesson}}</h6>
+            <div class="close"  ng-click="tooglepopup($event, $index)">
+              <core-icon icon="close"></core-icon>
+            </div>
+            <p style="margin: 5px 0px;"><a href="#/search" class="link" style="font-size: 10pt;">Xtend Barre</a><span> Brooklin Heights, Brooklyn</span></p>
+            <p style="margin: 5px 0px;">Barre, All Levels</p>
+         </div>
+         
+          <div class="classdetails" style="position: relative">
+            <div class="tabl1">
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <h5>ABOUT THE CLASS</h5>
+              </div>
+              <div class="content" style="padding: 10px;">
+                <div id="more" style="overflow: hidden; height: 245px;">
+                  <p><strong>Instructor:</strong> Susan</p>
+                  <p><strong>Categories:</strong> some categories</p>
+                  <p><strong>Description:</strong> Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
+                  Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
+                   them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.
+                  Xtend Barre brings in elements of dance, ballet and Pilates to create an adrenaline-fueled workout that strengthens, lengthens and chisels the body.
+                  Each class features an elegant yet energetic combination of movements that enhance flexibility, improve balance, and challenge the core. We take pride in our clients' sweat and guide
+                   them to jaw dropping results by doing everything we can to keep their bodies on point in the studio and beyond.</p>
+                </div>
+                <div style="width: 100%;" class="hover"><paper-button id="aboutread" ng-click="viewmore($event)"><h5 style="margin: 0px; font-size: 13pt;">READ MORE</h5></paper-button></div>
+              </div>
+            </paper-shadow>
+
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <strong><h5>PRICING</h5></strong>
+              </div>
+              <div class="content" style="padding: 10px;">
+                <div class="rTable">
+                  <div class="rBody">
+                  <div class="rRow item" ng-repeat="item in items"><div class="rCell" style="text-align: left;">{{item.desc}}</div><div class="rCell" style="text-align: right;">{{item.price}}</div><paper-ripple fit></paper-ripple></div>
+                  </div>
+                </div>
+              </div>
+            </paper-shadow>
+          </div>
+          <div class="tabl2">
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <strong><h5>TAKE THIS CLASS</h5></strong>
+              </div>
+              <div class="content">
+                <div class="sect">
+                  <div style="padding: 5px 0px;"><strong>Today 5:15 - 6:15 PM 60 mins</strong></div>
+                  <div style="padding: 5px 0px;"><paper-button class="reserve" raised>RESERVE NOW</paper-button></div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="add" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" ><span>Add to schedule</span></div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="star-outline" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" >Add to favorite</div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="social:share" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" >Invite friends</div>
+                </div>
+                <div class="sect">
+                  <div class= "tagg l" ><paper-fab icon="settings-input-antenna" title="plus" role="button" tabindex="0"></paper-fab></div>
+                  <div class= "tagg r" >Get notified of changes or cancellations</div>
+                </div>
+              </div>
+            </paper-shadow>
+            <paper-shadow z="2" class="tabl">
+              <div class="header">
+                <strong><h5>OTHER DATES/TIMES</h5></strong>
+              </div>
+              <div class="content" style="padding: 0px 10px 10px 10px;">
+                <div class="rTable">
+                  <div class="rHeading">
+                    <div class="rHead">DATE/TIME</div><div class="rHead">INSTRUCTOR</div> 
+                  </div>
+                  <div class="rBody" style="height: 120px; overflow: auto;">
+                    <div class="rRow item" ng-repeat="date in dates"><div class="rCell">{{date.date}}, {{date.time}}</div><div class="rCell">{{date.instr}}</div><paper-ripple fit></paper-ripple></div>
+                  </div>
+                </div>
+              </div>
+            </paper-shadow>
+          </div> 
+
+        </paper-dialog>
+      </section>
+     </div>
+   </paper-shadow>
+ </div>
+  <paper-shadow z="1" class="col-md-5 col-sm-5 col-xs-5 editFilters" ng-click="toggleFilters($event)"  >
+     <div class="header">
+      <h6> EDIT FILTERS</h6>
+     </div>
+   </paper-shadow>
+    <paper-shadow z="1" class="editFiltersOpen" style="display:none;">
+     <div class="header">
+      <h6> EDIT FILTERS</h6>
+      <div class="close"  ng-click="toggleFilters($event)">
+        <core-icon icon="close"></core-icon>
+      </div>
+     </div>
+     <div class="radios">
+       <paper-radio-group selected="small">
+         <paper-radio-button name="small" toggles label="Group Classes"></paper-radio-button>
+         </paper-radio-group>
+                <paper-radio-group >
+         <paper-radio-button name="medium" toggles label="Classes at my gym"></paper-radio-button>
+         </paper-radio-group>       
+     </div>
+     <div  style="position: relative">
+       <div style="position:relative" ng-repeat="fil in filters">
+          <paper-shadow z="1"  >
+         <div class="heading" ng-click="toggle($event, $index)">{{fil}}
+           <div class="open{{$index}} icon-collapse">
+              <paper-shadow z="1"  >
+              <paper-icon-button icon="arrow-drop-down" style="float: left;"></paper-icon-button> 
+            </paper-shadow>
+           </div>
+           <div class="close{{$index}} icon-collapse" style="display:none">
+              <paper-shadow z="1"  >
+             <paper-icon-button icon="arrow-drop-up" style="float: left;"></paper-icon-button> 
+           </paper-shadow>
+           </div>
+         <core-collapse id="collapse{{$index}}">
+           <div class="collapse-content" class="co">
+           here the content
+           </div>
+         </core-collapse>
+         </div>
+       </paper-shadow>
+         <!--
+       <paper-dropdown-menu label="{{fil}}"  relative layout inline horizontal center>
+           <paper-dropdown class="dropdown">
+               <core-menu class="menu">
+                   <paper-item>Croissant</paper-item>
+                   <paper-item>Donut</paper-item>
+                   <paper-item>Financier</paper-item>
+                   <paper-item>Madeleine</paper-item>
+               </core-menu>
+           </paper-dropdown>
+       </paper-dropdown-menu>-->
+     </div>
+     </div>
+   </paper-shadow>
+</div>
+<!--<div style="position: fixed; top: 300px; right: 800px; z-index: 66;">
+  <polymer-element name="prueba-css">
+  <template>
+  <style>
+    #hero1 {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+    }
+    #hero2 {
+      position: relative;
+      top: 200px;
+      left: 300px;
+      width: 300px;
+      height: 300px;
+    }
+    #hero1 {
+      background-color: blue;
+    }
+    #hero2 {
+      background-color: green;
+    }
+  </style>
+  <core-animated-pages id="lamina" transitions="hero-transition" selected="{{selectedPageIndex}}">
+    <section id="page1">
+      <div id="hero1" hero-id="hero" hero ng-click="changetr($event)" on-tap="{{nextPage}}"></div>
+    </section>
+    <section id="page2">
+      <div id="hero2" hero-id="hero" hero ng-click="changetr($event)" on-tap="{{previousPage}}"></div>
+    </section>
+  </core-animated-pages>
+</template>
+  <script>
+    Polymer("prueba-css", {
+      selectedPageIndex: 0,
+     
+      previousPage: function() {
+        this.$.lamina.selectPrevious(true);
+      },
+      
+      nextPage: function() {
+        this.$.lamina.selectNext(true);
+      }
+    });
+  </script>
+  </polymer-element>
+  <prueba-css></prueba-css>
+</div>-->
