@@ -30,6 +30,13 @@
   }
   
 }
+@media (max-width:991px) {
+  .col-md-4{
+      display: inline-block !important;
+      max-width: 49.5% !important;
+  }
+  
+}
 @media (max-width:640px) {
   .browse-class h2{
       font-size: 14pt !important;

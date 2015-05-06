@@ -16,11 +16,7 @@
             </select>
           </li>
           <li>
-            <div class="right-inner-addon shadowFilter">
-                  <button class="fa fa-times" ng-click="clearLoc('close')" ng-show="!isLocTyp"></button>
-                  <button class="fa fa-location-arrow lightPink" ng-click="clearLoc('loc')" ng-show="isLocTyp"></button>
-                  <input type="text" class="form-control-home" placeholder="{{placeLoc}}" ng-model="locationFilter" ng-focus="isLocTyp=true;placeLoc='enter address or zip'" ng-blur="isLocTyp=false" />
-              </div><!-- /input-group -->
+              <autocomplete ng-model="placeLoc" data="states"></autocomplete>
           </li>
           <li>
             <div class="shadowFilter btn-group bootstrap-select show-tick" style="width: 200px;" sub-menu>
@@ -93,13 +89,13 @@
     <div><h2>Browse Classes in</h2> </div>
     <div class="classSearch">
       <h2>
-      <md-select ng-model="cityClass">
-        <md-option value="0" ng-selected="true">New York, NY</md-option>
-        <md-option value="1">New Jersy</md-option>
-        <md-option value="2">Las Vegas</md-option> 
-        <md-option value="3">California</md-option>      
-      </md-select>
-    </h2>
+        <md-select ng-model="cityClass" class="ng-touched">
+          <md-option value="0" ng-selected="true">New York, NY</md-option>
+          <md-option value="1">New Jersy</md-option>
+          <md-option value="2">Las Vegas</md-option> 
+          <md-option value="3">California</md-option>      
+        </md-select>
+      </h2>
     </div>
   </div>
 

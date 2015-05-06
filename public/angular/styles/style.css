@@ -57,7 +57,7 @@ md-select{
 	margin-top: 0px !important;
 }
 md-option .md-text{
-	color: #4BC4F3;
+	color: #565758;
 }
 md-select-menu{
 	font-family:LatoHairline;
@@ -68,14 +68,14 @@ md-sidenav{
 	z-index: 9999999;
 }
 .check-mark{
-	color: #4BC4F3;
+	color: #565758;
 }
 
 .input-home md-select.md-default-theme .md-select-label{
 	border-bottom-color:#fff !important;
 }
 .browse-class md-select.md-default-theme .md-select-label{
-	border-bottom-color:#4BC4F3 !important;
+	border-bottom-color:#565758 !important;
 }
 .browse-class{
 	color:#4BC4F3;
@@ -102,7 +102,7 @@ md-sidenav{
 	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
 }
 .home-class{
-	background-color: #4BC4F3;
+	background-color: #565758;
 	min-height:500px;
 	padding: 5%;
 }
@@ -133,7 +133,7 @@ md-sidenav{
 	font-size: 26pt;
 	letter-spacing: 8px;
 	line-height: 140%;
-	color: #4BC4F3;
+	color: #565758;
 	float: right;
 }
 .browse-class{
@@ -149,7 +149,7 @@ md-sidenav{
 }
 
 .post-content {
-	background-color: #F48DB1;
+	background-color: #565758;
 /*	text-align: center;
 	text-transform: uppercase;
     top:0;
@@ -167,7 +167,7 @@ md-sidenav{
 .post-content h4{
 	color: #ffffff;
 	font-size: 18px;
-	letter-spacing: .02em;
+	font-weight: bolder;
 	margin: auto;
 }
 .thumbnail{
@@ -199,12 +199,21 @@ md-sidenav{
     padding: 12px 12px;
     pointer-events: none;
 }
-.right-inner-addon span {
+.right-inner-addon button {
     position: absolute;
-    color: #4BC4F3;
+    color: #565758;
+    right: 0px;
+    padding: 12px 12px;
+    background-color: transparent;
+    border: none;
+}
+.right-inner-addon span {
+	color: #4BC4F3;
+   /* position: absolute;
+    
     right: 25px;
     padding: 12px 12px;
-    pointer-events: none;
+    pointer-events: none;*/
 }
 .form-control-home:-moz-placeholder,
 .form-control-browse:-moz-placeholder {
@@ -233,7 +242,7 @@ md-sidenav{
 	font-size: 14px;
 	font-weight: bolder;
 	line-height: 1.428571429;
-	color: #4BC4F3;
+	color: #565758;
 	vertical-align: middle;
 	background-color: #fff; 
 	background-image: none;
@@ -255,7 +264,7 @@ md-sidenav{
 	font-size: large;
 }
 .form-control-select ul > li:hover{
-	background-color: #4BC4F3;
+	background-color: #565758 !important;
 	color: #ffffff;
 }
 
@@ -296,7 +305,7 @@ width: 90%;
 	float: right;
   margin-top: 3px;
   font-size: 20px;
-  color:#4BC4F3;
+  color:#565758;
 }
 .rotateCaroot{
 	-webkit-animation:spin 4s linear infinite;
@@ -336,10 +345,10 @@ width: 90%;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0px;
-	color: #4BC4F3 !important;
+	color: #fff !important;
 	font-size: 1.2em;
 	font-weight: bolder;
-	background: #FEEE58 !important;
+	background: #10ACF5 !important;
 	padding: 3px 10px;
 	text-decoration: none;
 }
@@ -396,7 +405,7 @@ width: 90%;
 .subMenuList{
 	left:180px;
 	top: 0px;
-	color:#4BC4F3;
+	color:#565758;
 	max-width: 150px;
  	min-width: 100px !important;
  	border-radius: 0px !important;
@@ -405,7 +414,7 @@ width: 90%;
 	padding-left: 15px;
 }
 .subMenu a {
-	color:#4BC4F3;
+	color:#565758;
 	text-decoration: none;
 }
 /*.subMenu:hover {
@@ -442,7 +451,7 @@ md-select.md-default-theme:not([disabled]):focus .md-select-label {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#4BC4F3', endColorstr = '#4BC4F3', GradientType = 0)
 }
 .dropdown-menu li > a{
-	color:  #4BC4F3 !important;
+	color:  #565758 !important;
 }
 
 /*.dropdown-menu {

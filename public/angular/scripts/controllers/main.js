@@ -8,7 +8,7 @@
  * Controller of the webappApp
  */
 angular.module('sweatnet')
-  .controller('MainCtrl', function ($scope, $mdSidenav, $timeout, $q) {
+  .controller('MainCtrl', function ($scope, $mdSidenav, $timeout, $q, $log) {
     $scope.iconLoc = "fa fa-times";
     $scope.placeLoc = "in New York, NY";
     $scope.classesList=['All Classes','Barre','Bootcamp','Boxing','Cardio','Crossfit','test input'];
@@ -33,13 +33,13 @@ angular.module('sweatnet')
    		{'title':"Crew","image":"img/a/crew.jpg"}
     ];
     $scope.isLocTyp = false;
-    $scope.clearLoc = function(iconLoc){
-      console.log(iconLoc)
-        if($scope.placeLoc=="enter address or zip")
-          $scope.locationFilter = "";
-        else
-          $scope.locationFilter = "in New York, NYC";
+    function loadAll() {
+      var allStates = 'New York, New Jersey, Texas, Washington, Massachusetts';
+      return allStates.split(/, +/g).map( function (state) {
+        return state
+      });
     }
+    $scope.states = loadAll();
   }).directive('selectMulti', function() {
     return {
       link: function (scope, element) {
@@ -122,6 +122,4 @@ var cancelSet = function(){
   $("#changedDate").html("More Dates")
   $(".datepicker").hide();
 }
-
-
 
